@@ -17,5 +17,7 @@ func solveAndPrintValues() {
   // print(majority([3, 2, 3, 4, 1, 2, 5, 3]))
   // print(findPairs([1, 3, 1, 5, 4], 1))
   // print(containsDuplicate([1, 2, 3, 4, 5]))
-  print(containsNearbyDuplicate([1, 0, 1, 1], 1))
+  // print(containsNearbyDuplicate([1, 0, 1, 1], 1))
+  var nums = [1, 2, 2, 3, 3, 5, 5, 6]
+  print(removeDuplicates(&nums))
 }
