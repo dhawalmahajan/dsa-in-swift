@@ -1,3 +1,3 @@
 func isPalindromicString(str: String) -> Bool {
-  return Array(str) == str.reversed()
+  return str.charArray() == str.reversedString().charArray()
 }
