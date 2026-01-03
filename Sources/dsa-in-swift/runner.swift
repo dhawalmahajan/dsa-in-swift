@@ -21,5 +21,8 @@ func solveAndPrintValues() {
   // var nums = [1, 2, 2, 3, 3, 5, 5, 6]
   // print(removeDuplicates(&nums))
   // print(fizzBuzz(n: 15))
-  print(isPalindromicString(str: "tent"))
+  // print(isPalindromicString(str: "tenet"))
+  // print(firstUniqueChar(in: "interaction"))
+  // print(validPalindrome("abca"))
+  print(romanToInt("MCMXCIV"))
 }

@@ -1,6 +1,39 @@
 import Foundation
 
 final class Input {
+  static func read<T>() -> T? {
+    guard let input = readLine() else { return nil }
+    switch T.self {
+    case is Int.Type:
+      return Int(input) as? T
+    case is Double.Type:
+      return Double(input) as? T
+    case is String.Type:
+      return input as? T
+    default:
+      return nil
+    }
+  }
+
+  static func readArray<T>() -> [T] {
+    guard let input = readLine() else { return [] }
+
+    return
+      input
+      .split(separator: " ")
+      .compactMap { value in
+        switch T.self {
+        case is Int.Type:
+          return Int(value) as? T
+        case is Double.Type:
+          return Double(value) as? T
+        case is String.Type:
+          return String(value) as? T
+        default:
+          return nil
+        }
+      }
+  }
 
   static func readInt() -> Int {
     Int(readLine() ?? "") ?? 0
