@@ -5,9 +5,10 @@ func linkList() {
   list.insertData(data: 8)
   list.insertData(data: 11)
   list.insertData(data: 12)
-  list.append(11)
+  list.append(13)
 
-  let found = list.find(value: 9)
-  print(found?.value ?? -1)
-  // list.printList()
+  // let found = list.find(value: 9)
+  // print(found?.value ?? -1)
+  let _ = list.delete(value: 34)
+  list.printList()
 }
