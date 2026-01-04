@@ -24,5 +24,7 @@ func solveAndPrintValues() {
   // print(isPalindromicString(str: "tenet"))
   // print(firstUniqueChar(in: "interaction"))
   // print(validPalindrome("abca"))
-  print(romanToInt("MCMXCIV"))
+  // print(romanToInt("MCMXCIV"))
+  print(linkList())
+
 }
