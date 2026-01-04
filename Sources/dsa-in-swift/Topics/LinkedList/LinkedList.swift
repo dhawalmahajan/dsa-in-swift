@@ -14,7 +14,7 @@ class LinkedList<Value: Equatable> {
     var isEmpty: Bool {
         return head == nil
     }
-
+    // Insert: Adds to the start of the list - O(1)
     func insertData(data: Value) {
         let newNode = Node(value: data)
         newNode.next = head
@@ -58,6 +58,18 @@ class LinkedList<Value: Equatable> {
             previous?.next = current?.next
         }
         return current
+    }
+    func reverse() {
+        var previous: Node<Value>?
+        var current = head
+        var next: Node<Value>?
+        while current != nil {
+            next = current?.next
+            current?.next = previous
+            previous = current
+            current = next
+        }
+        head = previous
     }
     func printList() {
         var current = head
