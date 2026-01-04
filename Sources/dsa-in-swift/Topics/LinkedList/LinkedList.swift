@@ -7,7 +7,7 @@ class Node<Value> {
     self.next = next
   }
 }
-class LinkedList<Value> {
+class LinkedList<Value: Equatable> {
   var head: Node<Value>?
   var tail: Node<Value>?
 
@@ -34,6 +34,14 @@ class LinkedList<Value> {
     let newNode = Node(value: value)
     current?.next = newNode
   }
+  func find(value: Value) -> Node<Value>? {
+    var current = head
+    while current != nil && current?.value != value {
+      current = current?.next
+    }
+    return current
+  }
+
   func printList() {
     var current = head
     while current != nil {

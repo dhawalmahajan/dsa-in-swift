@@ -8,7 +8,8 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "stopOnEntry": false
+            "stopOnEntry": false,
+            "preLaunchTask": "swift: Build Debug dsa-in-swift"
         },
         {
             "type": "swift",

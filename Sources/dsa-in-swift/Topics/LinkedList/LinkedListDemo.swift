@@ -6,5 +6,8 @@ func linkList() {
   list.insertData(data: 11)
   list.insertData(data: 12)
   list.append(11)
-  list.printList()
+
+  let found = list.find(value: 9)
+  print(found?.value ?? -1)
+  // list.printList()
 }
