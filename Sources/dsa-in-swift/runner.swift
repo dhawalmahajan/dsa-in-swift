@@ -25,6 +25,7 @@ func solveAndPrintValues() {
   // print(firstUniqueChar(in: "interaction"))
   // print(validPalindrome("abca"))
   // print(romanToInt("MCMXCIV"))
-  print(linkList())
+  // print(linkList())
+  print(mergeLinkedLists())
 
 }
