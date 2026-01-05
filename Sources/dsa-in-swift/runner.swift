@@ -26,6 +26,7 @@ func solveAndPrintValues() {
   // print(validPalindrome("abca"))
   // print(romanToInt("MCMXCIV"))
   // print(linkList())
-  print(mergeLinkedLists())
+  // print(mergeLinkedLists())
+  detectLoopInLinkedList()
 
 }
