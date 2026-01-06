@@ -28,7 +28,7 @@ func solveAndPrintValues() {
   // print(linkList())
   // print(mergeLinkedLists())
   // detectLoopInLinkedList()
-  detectCycleLoopAndLength()
-  detectCycleLoopAndLength()
+  // detectCycleLoopAndLength()
+  detectStartofCycleLoopAndLength()
 
 }
