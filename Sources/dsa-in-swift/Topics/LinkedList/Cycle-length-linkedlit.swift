@@ -1,18 +1,21 @@
 private func detect(_ list: Node<Int>?) -> Bool {
+  if list == nil {
+    return false
+  }
   var slow = list
   var fast = list
-  let slowNext = slow?.next
-  let fastNext = fast?.next
-  let fastNextNext = fastNext?.next
-  while slowNext != nil && fastNext != nil && fastNextNext != nil {
-    slow = slowNext
-    fast = fastNextNext
-    if slow?.value == fast?.value {
-      var count = 0
-      repeat {
+
+  while fast?.next != nil && fast?.next?.next != nil {
+    slow = slow?.next
+    fast = fast?.next?.next
+    if slow === fast {
+      // Cycle detected, now calculate length
+      var count = 1
+      var temp = slow?.next
+      while temp !== slow {
         count += 1
-        fast = fast?.next
-      } while slow?.value != fast?.value
+        temp = temp?.next
+      }
       print("Cycle length is \(count)")
       return true
     }
