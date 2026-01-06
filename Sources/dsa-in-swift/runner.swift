@@ -27,6 +27,7 @@ func solveAndPrintValues() {
   // print(romanToInt("MCMXCIV"))
   // print(linkList())
   // print(mergeLinkedLists())
-  detectLoopInLinkedList()
+  // detectLoopInLinkedList()
+  detectCycleLoopAndLength()
 
 }
