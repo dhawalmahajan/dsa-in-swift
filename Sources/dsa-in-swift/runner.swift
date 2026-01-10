@@ -30,6 +30,7 @@ func solveAndPrintValues() {
   // detectLoopInLinkedList()
   // detectCycleLoopAndLength()
   // detectStartofCycleLoopAndLength()
-  printLinkedListStack()
-
+  // printLinkedListStack()
+  // minStackDemo()
+  validParanthesisDemo()
 }
