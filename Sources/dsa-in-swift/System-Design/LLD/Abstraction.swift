@@ -15,7 +15,7 @@ also they are hidden under the hood.
 6. This Class 'Car' denotes that (pedals/buttons/steering wheel etc).
 */
 // Base class
-class Car {
+class AbstractionCar {
   func startEngine() {}
   func shiftGear(_ gear: Int) {}
   func accelerate() {}
@@ -23,7 +23,7 @@ class Car {
   func stopEngine() {}
 }
 
-class RaceCar: Car {
+class RaceCar: AbstractionCar {
   var brand: String
   var model: String
   var isEngineOn: Bool
@@ -78,7 +78,7 @@ class RaceCar: Car {
 
 func abstractionDemo() {
   print("=== Abstraction Demo ===")
-  let myCar: Car = RaceCar(brand: "Ford", model: "Mustang")
+  let myCar: AbstractionCar = RaceCar(brand: "Ford", model: "Mustang")
 
   myCar.startEngine()
   myCar.shiftGear(1)

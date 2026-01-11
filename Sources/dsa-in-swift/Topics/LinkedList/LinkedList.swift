@@ -34,6 +34,36 @@ class LinkedList<Value: Equatable> {
     let newNode = Node(value: value)
     current?.next = newNode
   }
+  // Insert at specific position (0-based index) - O(n)
+  func insert(_ value: Value, at index: Int) {
+    if index < 0 {
+      return
+    }
+
+    // Insert at head
+    if index == 0 {
+      insertData(data: value)
+      return
+    }
+
+    var current = head
+    var currentIndex = 0
+
+    // Traverse to the node just before the desired index
+    while current != nil && currentIndex < index - 1 {
+      current = current?.next
+      currentIndex += 1
+    }
+
+    // If index is out of bounds
+    if current == nil {
+      return
+    }
+
+    let newNode = Node(value: value)
+    newNode.next = current?.next
+    current?.next = newNode
+  }
   func find(value: Value) -> Node<Value>? {
     var current = head
     while current != nil && current?.value != value {
