@@ -26,7 +26,7 @@ func solveAndPrintValues() {
   // print(validPalindrome("abca"))
   // print(romanToInt("MCMXCIV"))
   // print(linkedList())
-  circularLinkedListDemo()
+  // circularLinkedListDemo()
   // print(mergeLinkedLists())
   // detectLoopInLinkedList()
   // detectCycleLoopAndLength()
@@ -34,4 +34,9 @@ func solveAndPrintValues() {
   // printLinkedListStack()
   // minStackDemo()
   // validParanthesisDemo()
+
+}
+
+func solveSystemDesignDemo() {
+  staticAndDynamicPolymorphismDemo()
 }
