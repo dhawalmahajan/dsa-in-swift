@@ -38,5 +38,6 @@ func solveAndPrintValues() {
 }
 
 func solveSystemDesignDemo() {
-  staticAndDynamicPolymorphismDemo()
+  // staticAndDynamicPolymorphismDemo()
+  staticPolymorphismDemo()
 }
