@@ -34,10 +34,16 @@ func solveAndPrintValues() {
   // printLinkedListStack()
   // minStackDemo()
   // validParanthesisDemo()
+  validLongParanthesisDemo()
 
 }
 
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
-  staticPolymorphismDemo()
+  // staticPolymorphismDemo()
+  // liskovSubstitutionDemo()
+  // openCloseDemo()
+  // SRPDemo()
+  // dependencyInversionDemo()
+  interfaceSegregationDemo()
 }

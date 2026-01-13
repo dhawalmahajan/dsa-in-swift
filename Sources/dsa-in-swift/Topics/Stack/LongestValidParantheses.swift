@@ -7,7 +7,7 @@ func longestValidParentheses(_ s: String) -> Int {
     if char == "(" {
       stack.append(i)
     } else {
-      stack.popLast()
+      stack.removeLast()
       if !stack.isEmpty {
         result = max(result, i - (stack.last ?? -1))
         stack.append(i)
@@ -18,4 +18,8 @@ func longestValidParentheses(_ s: String) -> Int {
 
   }
   return result
+}
+func validLongParanthesisDemo() {
+  let s = "(()))())("
+  print("Longest valid parantheses in \(s) is \(longestValidParentheses(s))")
 }
