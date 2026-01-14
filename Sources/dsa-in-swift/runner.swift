@@ -34,7 +34,8 @@ func solveAndPrintValues() {
   // printLinkedListStack()
   // minStackDemo()
   // validParanthesisDemo()
-  validLongParanthesisDemo()
+  // validLongParanthesisDemo()
+  anagramDemo()
 
 }
 
