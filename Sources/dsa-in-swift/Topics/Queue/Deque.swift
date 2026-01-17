@@ -1,30 +1,37 @@
-struct Deque<T> {
+// MARK: - Deque (Double Ended Queue)
+
+struct Deque<T>: QueueProtocol {
   private var items: [T] = []
 
-  mutating func pushFront(_ item: T) {
-    items.insert(item, at: 0)
+  mutating func enqueue(_ element: T) {
+    items.append(element)  // enqueue at rear
   }
 
-  mutating func pushBack(_ item: T) {
-    items.append(item)
+  mutating func enqueueFront(_ element: T) {
+    items.insert(element, at: 0)
   }
 
-  mutating func popFront() -> T? {
+  mutating func dequeue() -> T? {
     isEmpty ? nil : items.removeFirst()
   }
 
-  mutating func popBack() -> T? {
-    items.popLast()
+  mutating func dequeueRear() -> T? {
+    isEmpty ? nil : items.removeLast()
+  }
+
+  func peek() -> T? {
+    items.first
+  }
+
+  func peekRear() -> T? {
+    items.last
   }
 
   var isEmpty: Bool {
     items.isEmpty
   }
-  func peekFront() -> T? {
-    items.first
-  }
-  func peekBack() -> T? {
-    items.last
-  }
 
+  var count: Int {
+    items.count
+  }
 }
