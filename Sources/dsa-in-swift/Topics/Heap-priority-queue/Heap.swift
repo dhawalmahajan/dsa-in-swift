@@ -1,49 +1,132 @@
-struct Heap<T: Comparable> {
-  private var heap: [T] = []
+//
+//  Heap.swift
+//  DSA-Swift
+//
+//  Created by Shivam Jaiswal on 09/04/20.
+//  Copyright © 2020 Shivam Jaiswal. All rights reserved.
+//
 
-  mutating func insert(_ value: T) {
-    heap.append(value)
-    shiftUp(heap.count - 1)
+import Foundation
+
+class Heap<T: Comparable> {
+  enum HeapOrdering {
+    case min
+    case max
   }
 
-  mutating func extractMin() -> T? {
-    guard !heap.isEmpty else { return nil }
-    heap.swapAt(0, heap.count - 1)
-    let min = heap.removeLast()
-    shiftDown(0)
-    return min
+  let ordering: HeapOrdering
+  private(set) var items: [T]
+
+  init(ordering: HeapOrdering, items: [T] = []) {
+    self.ordering = ordering
+    self.items = items
+    buildHeap()
   }
 
-  func peek() -> T? {
-    heap.first
-  }
-
-  private mutating func shiftUp(_ index: Int) {
-    var child = index
-    var parent = (child - 1) / 2
-    while child > 0 && heap[child] < heap[parent] {
-      heap.swapAt(child, parent)
-      child = parent
-      parent = (child - 1) / 2
+  func insert(_ element: T) {
+    if items.isEmpty {
+      items.append(element)
+    } else {
+      items.append(element)
+      shiftUp(size - 1)
     }
   }
 
-  private mutating func shiftDown(_ index: Int) {
-    var parent = index
-    while true {
-      let left = 2 * parent + 1
-      let right = left + 1
-      var smallest = parent
-
-      if left < heap.count && heap[left] < heap[smallest] {
-        smallest = left
-      }
-      if right < heap.count && heap[right] < heap[smallest] {
-        smallest = right
-      }
-      if smallest == parent { break }
-      heap.swapAt(parent, smallest)
-      parent = smallest
+  @discardableResult
+  func delete() -> T? {
+    if items.isEmpty {
+      return nil
+    } else if items.count == 1 {
+      return items.removeLast()
+    } else {
+      items.swapAt(0, items.count - 1)
+      let item = items.removeLast()
+      heapify(0)
+      return item
     }
+  }
+
+  func sort() -> [T] {
+    guard items.count > 1 else { return items }
+
+    var sortedArray: [T] = []
+
+    while !isEmpty {
+      if let element = delete() {
+        sortedArray.append(element)
+      }
+    }
+
+    return sortedArray
+  }
+
+  var isEmpty: Bool {
+    return items.isEmpty
+  }
+
+  var size: Int {
+    return items.count
+  }
+
+  var peek: T? {
+    return items.first
+  }
+
+  private func shiftUp(_ index: Int) {
+    var childIndex = index
+    var parentIndex = self.parentIndex(childIndex)
+
+    while childIndex > 0 && shouldSwap(childIndex: childIndex, parentIndex: parentIndex) {
+      items.swapAt(childIndex, parentIndex)
+      childIndex = parentIndex
+      parentIndex = self.parentIndex(childIndex)
+    }
+  }
+
+  private func heapify(_ index: Int) {
+    let leftChildIndex = leftChildIndex(index)
+    let rightChildIndex = rightChildIndex(index)
+
+    var targetIndex = index
+
+    if leftChildIndex < size && shouldSwap(childIndex: leftChildIndex, parentIndex: targetIndex) {
+      targetIndex = leftChildIndex
+    }
+
+    if rightChildIndex < size && shouldSwap(childIndex: rightChildIndex, parentIndex: targetIndex) {
+      targetIndex = rightChildIndex
+    }
+
+    if targetIndex != index {
+      items.swapAt(index, targetIndex)
+      heapify(targetIndex)
+    }
+  }
+
+  private func shouldSwap(childIndex: Int, parentIndex: Int) -> Bool {
+    switch ordering {
+    case .max:
+      return items[childIndex] > items[parentIndex]
+    case .min:
+      return items[childIndex] < items[parentIndex]
+    }
+  }
+
+  private func buildHeap() {
+    for i in stride(from: size / 2 - 1, through: 0, by: -1) {
+      heapify(i)
+    }
+  }
+
+  private func parentIndex(_ index: Int) -> Int {
+    return (index - 1) / 2
+  }
+
+  private func leftChildIndex(_ index: Int) -> Int {
+    return 2 * index + 1
+  }
+
+  private func rightChildIndex(_ index: Int) -> Int {
+    return 2 * index + 2
   }
 }

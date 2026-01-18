@@ -35,7 +35,8 @@ func solveAndPrintValues() {
   // minStackDemo()
   // validParanthesisDemo()
   // validLongParanthesisDemo()
-  anagramDemo()
+  // anagramDemo()
+  finalPricesDemo()
 
 }
 
