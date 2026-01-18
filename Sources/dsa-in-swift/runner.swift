@@ -36,7 +36,8 @@ func solveAndPrintValues() {
   // validParanthesisDemo()
   // validLongParanthesisDemo()
   // anagramDemo()
-  finalPricesDemo()
+  // finalPricesDemo()
+  decodeXORArrayDemo()
 
 }
 
