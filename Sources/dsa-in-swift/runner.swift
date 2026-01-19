@@ -39,7 +39,8 @@ func solveAndPrintValues() {
   // finalPricesDemo()
   // decodeXORArrayDemo()
   // sumOfUniqueDemo()
-  bubbleSortExample()
+  // bubbleSortExample()
+  rotateArrayDemo()
 
 }
 
