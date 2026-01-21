@@ -1,9 +1,8 @@
 func solve() {
   _ = Input.readInt()
-  let arr = Input.readArray()
-  let target = Input.readInt()
 
-  print(binarySearch(arr, target))
+  let target = Input.readInt()
+  print(decimalToBinary(target))
   // print(containsNearbyDuplicate(arr, target))
 
 }
@@ -41,6 +40,7 @@ func solveAndPrintValues() {
   // sumOfUniqueDemo()
   // bubbleSortExample()
   // rotateArrayDemo()
+  print(decimalToBinary(5))
 
 }
 
