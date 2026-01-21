@@ -8,7 +8,7 @@ func solve() {
 
 }
 func solveAndPrintValues() {
-
+  patternPrintingDemo()
   // print(intersection([4, 9, 5], [9, 4, 9, 8, 4]))
   // print(binarySearch([1, 2, 3, 4, 5], 3))
   // print(isSubsequence("as", "basdcas"))
@@ -40,7 +40,7 @@ func solveAndPrintValues() {
   // decodeXORArrayDemo()
   // sumOfUniqueDemo()
   // bubbleSortExample()
-  rotateArrayDemo()
+  // rotateArrayDemo()
 
 }
 
