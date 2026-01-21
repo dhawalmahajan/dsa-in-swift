@@ -41,7 +41,8 @@ func solveAndPrintValues() {
   // bubbleSortExample()
   // rotateArrayDemo()
   // print(decimalToBinary(5))
-  runCycleDetectionExamples()
+  // runCycleDetectionExamples()
+  insertionSortExample()
 
 }
 
