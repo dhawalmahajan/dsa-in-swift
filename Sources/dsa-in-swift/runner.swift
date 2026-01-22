@@ -54,6 +54,8 @@ func solveSystemDesignDemo() {
   // SRPDemo()
   // dependencyInversionDemo()
   // interfaceSegregationDemo()
-  documentEditorExample()
+  // documentEditorExample()
+  // strategyDesignPatternDemo()
+  abstractFactoryDemo()
 
 }
