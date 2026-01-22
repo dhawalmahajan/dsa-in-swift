@@ -53,5 +53,7 @@ func solveSystemDesignDemo() {
   // openCloseDemo()
   // SRPDemo()
   // dependencyInversionDemo()
-  interfaceSegregationDemo()
+  // interfaceSegregationDemo()
+  documentEditorExample()
+
 }

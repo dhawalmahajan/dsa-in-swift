@@ -6,8 +6,8 @@
 struct dsa_in_swift {
   static func main() {
     // solve()
-    solveAndPrintValues()
-    // solveSystemDesignDemo()
+    // solveAndPrintValues()
+    solveSystemDesignDemo()
   }
 
 }
