@@ -1,5 +1,6 @@
 import Foundation
 
+//TODO: Watch video again to understand better
 // Product 1 --> Burger
 protocol Burger {
   func prepare()
