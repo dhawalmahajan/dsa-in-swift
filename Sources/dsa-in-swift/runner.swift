@@ -40,8 +40,8 @@ func solveAndPrintValues() {
   // rotateArrayDemo()
   // print(decimalToBinary(5))
   // runCycleDetectionExamples()
-  insertionSortExample()
-
+  // insertionSortExample()
+  longestPalindromeDemo()
 }
 
 func solveSystemDesignDemo() {
