@@ -5,9 +5,9 @@
 @main
 struct dsa_in_swift {
   static func main() {
-    // solve()
+    solve()
     // solveAndPrintValues()
-    solveSystemDesignDemo()
+    // solveSystemDesignDemo()
   }
 
 }

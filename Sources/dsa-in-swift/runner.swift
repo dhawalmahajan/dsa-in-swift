@@ -1,6 +1,4 @@
 func solve() {
-  _ = Input.readInt()
-
   let target = Input.readInt()
   print(decimalToBinary(target))
   // print(containsNearbyDuplicate(arr, target))
