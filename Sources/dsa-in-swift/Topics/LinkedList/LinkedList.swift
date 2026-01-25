@@ -1,15 +1,6 @@
-class Node<Value> {
-  var value: Value
-  var next: Node?
-
-  init(value: Value, next: Node? = nil) {
-    self.value = value
-    self.next = next
-  }
-}
 class LinkedList<Value: Equatable> {
-  var head: Node<Value>?
-  var tail: Node<Value>?
+  var head: ListNode<Value>?
+  var tail: ListNode<Value>?
   private let isCircular: Bool
   init(isCircular: Bool = false) {
     self.isCircular = isCircular
@@ -20,7 +11,7 @@ class LinkedList<Value: Equatable> {
   }
   // Insert: Adds to the start of the list - O(1)
   func insertAtHead(_ value: Value) {
-    let newNode = Node(value: value)
+    let newNode = ListNode(value)
 
     if isEmpty {
       head = newNode
@@ -40,7 +31,7 @@ class LinkedList<Value: Equatable> {
   }
 
   func insertAtTail(_ value: Value) {
-    let newNode = Node(value: value)
+    let newNode = ListNode(value)
 
     if isEmpty {
       insertAtHead(value)
@@ -71,7 +62,7 @@ class LinkedList<Value: Equatable> {
       currentIndex += 1
     }
 
-    let newNode = Node(value: value)
+    let newNode = ListNode(value)
     newNode.next = current?.next
     current?.next = newNode
 
@@ -84,7 +75,7 @@ class LinkedList<Value: Equatable> {
   }
   // Append: Adds to the end of the list - O(1)
 
-  func find(value: Value) -> Node<Value>? {
+  func find(value: Value) -> ListNode<Value>? {
     var current = head
 
     if isCircular {
@@ -142,7 +133,7 @@ class LinkedList<Value: Equatable> {
     if isEmpty { return }
 
     var current = head
-    var previous: Node<Value>?
+    var previous: ListNode<Value>?
 
     if isCircular {
       repeat {
@@ -177,9 +168,9 @@ class LinkedList<Value: Equatable> {
     }
   }
   func reverse() {
-    var previous: Node<Value>?
+    var previous: ListNode<Value>?
     var current = head
-    var next: Node<Value>?
+    var next: ListNode<Value>?
     while current != nil {
       next = current?.next
       current?.next = previous

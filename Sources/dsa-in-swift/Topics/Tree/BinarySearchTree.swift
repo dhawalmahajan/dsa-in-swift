@@ -9,7 +9,7 @@ final class BinarySearchTree<Value: Comparable> {
     guard let node = node else {
       return TreeNode(value)
     }
-    if value < node.val {
+    if value < node.value {
       node.left = insert(from: node.left, value)
     } else {
       node.right = insert(from: node.right, value)
@@ -18,9 +18,9 @@ final class BinarySearchTree<Value: Comparable> {
   }
   func search(_ val: Value) -> Bool {
     var curr = root
-    while curr != nil {
-      if curr!.val == val { return true }
-      curr = val < curr!.val ? curr!.left : curr!.right
+    while let current = curr {
+      if current.value == val { return true }
+      curr = val < current.value ? current.left : current.right
     }
     return false
   }
