@@ -1,4 +1,4 @@
-private func detect(_ list: Node<Int>?) -> Bool {
+private func detect(_ list: ListNode<Int>?) -> Bool {
   if list == nil {
     return false
   }
@@ -15,12 +15,12 @@ private func detect(_ list: Node<Int>?) -> Bool {
   return false
 }
 func detectLoopInLinkedList() {
-  let list = Node<Int>(value: 1)
-  list.next = Node<Int>(value: 2)
-  let three = Node<Int>(value: 3)
+  let list = ListNode<Int>(value: 1)
+  list.next = ListNode<Int>(value: 2)
+  let three = ListNode<Int>(value: 3)
   list.next?.next = three
-  list.next?.next?.next = Node<Int>(value: 4)
-  list.next?.next?.next?.next = Node<Int>(value: 5)
+  list.next?.next?.next = ListNode<Int>(value: 4)
+  list.next?.next?.next?.next = ListNode<Int>(value: 5)
   list.next?.next?.next?.next?.next = three
 
   print(detect(list))

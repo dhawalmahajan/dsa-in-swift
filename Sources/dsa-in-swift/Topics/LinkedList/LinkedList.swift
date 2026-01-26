@@ -11,7 +11,7 @@ class LinkedList<Value: Equatable> {
   }
   // Insert: Adds to the start of the list - O(1)
   func insertAtHead(_ value: Value) {
-    let newNode = ListNode(value)
+    let newNode = ListNode(value: value)
 
     if isEmpty {
       head = newNode
@@ -31,7 +31,7 @@ class LinkedList<Value: Equatable> {
   }
 
   func insertAtTail(_ value: Value) {
-    let newNode = ListNode(value)
+    let newNode = ListNode(value: value)
 
     if isEmpty {
       insertAtHead(value)
@@ -62,7 +62,7 @@ class LinkedList<Value: Equatable> {
       currentIndex += 1
     }
 
-    let newNode = ListNode(value)
+    let newNode = ListNode(value: value)
     newNode.next = current?.next
     current?.next = newNode
 

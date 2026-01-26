@@ -1,12 +1,12 @@
 struct LinkedListStack<Element> {
-  var head: Node<Element>?
+  var head: ListNode<Element>?
   private(set) var length: Int
   init() {
 
     self.length = 0
   }
   mutating func push(_ item: Element) {
-    let newNode = Node(value: item)
+    let newNode = ListNode(value: item)
     newNode.next = head
     head = newNode
     length += 1
@@ -21,7 +21,7 @@ struct LinkedListStack<Element> {
     return value
   }
 
-  func peek() -> Node<Element>? {
+  func peek() -> ListNode<Element>? {
     head
   }
 

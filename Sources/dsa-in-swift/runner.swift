@@ -41,7 +41,8 @@ func solveAndPrintValues() {
   // print(decimalToBinary(5))
   // runCycleDetectionExamples()
   // insertionSortExample()
-  longestPalindromeDemo()
+  // longestPalindromeDemo()
+  sortSentenceDemo()
 }
 
 func solveSystemDesignDemo() {
