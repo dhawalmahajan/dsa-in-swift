@@ -28,9 +28,9 @@ The number of words in s is between 1 and 9.
 The words in s are separated by a single space.
 s contains no leading or trailing spaces.
 */
-private func sortSentence(_ s: String) -> String {
 
-  var answer: String = ""
+//runtime - 7ms
+private func sortSentence(_ s: String) -> String {
   let words = s.split(separator: " ")
   let sortedWords = words.sorted { word1, word2 in
     guard let last1 = word1.last, let last2 = word2.last,
@@ -40,14 +40,48 @@ private func sortSentence(_ s: String) -> String {
     }
     return index1 < index2
   }
-  for word in sortedWords {
-    let trimmedWord = word.dropLast()
-    answer += trimmedWord + " "
+  return sortedWords.map { String($0.dropLast()) }.joined(separator: " ")
+}
+
+//runtime - 0ms
+func alternateSortSentence(_ s: String) -> String {
+  var indices: [String.Index?] = []
+  for _ in 0...9 {
+    indices.append(nil)
   }
-  return answer
+  var current = s.startIndex
+  for iS in s.indices {
+    let ch = s[iS]
+    if ch == " " {
+      current = s.index(after: iS)
+    } else if let ascii = ch.asciiValue, ascii < 58 {
+      if let i = Int("\(ch)") {
+        indices[i] = current
+      }
+    }
+  }
+  var r = ""
+  for n in 1...9 {
+    if var iS = indices[n] {
+      while true {
+        let ch = s[iS]
+        if let ascii = ch.asciiValue, ascii < 58 {
+          break
+        }
+        r.append(ch)
+        iS = s.index(after: iS)
+        if iS == s.endIndex {
+          break
+        }
+      }
+      r.append(" ")
+    }
+  }
+  r.removeLast()
+  return r
 }
 
 func sortSentenceDemo() {
   let s = "is2 sentence4 This1 a3"
-  print(sortSentence(s))  // Output: "This is a sentence"
+  print(alternateSortSentence(s))  // Output: "This is a sentence"
 }
