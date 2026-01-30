@@ -43,7 +43,9 @@ func solveAndPrintValues() {
   // insertionSortExample()
   // longestPalindromeDemo()
   // sortSentenceDemo()
-  defangIPaddrDemo()
+  // defangIPaddrDemo()
+  // isRotatedDemo()
+  pangramDemo()
 }
 
 func solveSystemDesignDemo() {

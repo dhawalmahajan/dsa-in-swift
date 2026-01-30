@@ -1,35 +1,35 @@
 {
-    "configurations": [
-        {
-            "name": "Debug Swift DSA (LLDB)",
-            "type": "lldb",
-            "request": "launch",
-            "program": "${workspaceFolder}/.build/debug/dsa-in-swift",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal",
-            "stopOnEntry": false,
-            "preLaunchTask": "swift: Build Debug dsa-in-swift"
-        },
-        {
-            "type": "swift",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:dsa-in-swift}",
-            "name": "Debug dsa-in-swift",
-            "target": "dsa-in-swift",
-            "configuration": "debug",
-            "preLaunchTask": "swift: Build Debug dsa-in-swift"
-        },
-        {
-            "type": "swift",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:dsa-in-swift}",
-            "name": "Release dsa-in-swift",
-            "target": "dsa-in-swift",
-            "configuration": "release",
-            "preLaunchTask": "swift: Build Release dsa-in-swift"
-        }
-    ]
+  "configurations": [
+    {
+      "name": "Debug Swift DSA (LLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/.build/debug/dsa-in-swift",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopOnEntry": false,
+      "preLaunchTask": "swift: Build Debug dsa-in-swift",
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:dsa-in-swift}",
+      "name": "Debug dsa-in-swift",
+      "target": "dsa-in-swift",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug dsa-in-swift",
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:dsa-in-swift}",
+      "name": "Release dsa-in-swift",
+      "target": "dsa-in-swift",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release dsa-in-swift",
+    },
+  ],
 }
