@@ -47,7 +47,6 @@ func solveAndPrintValues() {
   // isRotatedDemo()
   pangramDemo()
 }
-
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
   // staticPolymorphismDemo()
@@ -58,6 +57,8 @@ func solveSystemDesignDemo() {
   // interfaceSegregationDemo()
   // documentEditorExample()
   // strategyDesignPatternDemo()
-  abstractFactoryDemo()
+  // abstractFactoryDemo()
+
+  simpleSingletonDemo()
 
 }
