@@ -46,8 +46,9 @@ func solveAndPrintValues() {
   // defangIPaddrDemo()
   // isRotatedDemo()
   // pangramDemo()
-  // sortStringDemo()
-  sortVowelsDemo()
+  //  sortStringDemo()
+  // sortVowelsDemo()
+  addStringsDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
