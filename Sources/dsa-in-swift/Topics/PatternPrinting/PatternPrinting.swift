@@ -79,11 +79,47 @@ func printPattern5() {
   }
 
 }
+/*
+    a b c d e
+    a b c d e
+    a b c d e
+    a b c d e
+    a b c d e
+*/
+func printPattern6() {
+  for i in 0..<5 {
+    let name = Unicode.Scalar("a").value
+    for j in 0..<5 {
+      if let char = Unicode.Scalar(name + UInt32(j)) {
+        print(Character(char), terminator: " ")
+      }
+    }
+    print("\n")
+  }
+}
+/*
+   *
+   * *
+   * * *
+   * * * *
+   * * * * *
+   */
+func printPattern7() {
+  // To be implemented
+  for i in 1...5 {
+    for _ in 1...i {
+      print("*", terminator: " ")
+    }
+    print("\n")
+  }
+}
 
 func patternPrintingDemo() {
   //   printPattern1(s: "*")
   //   printPattern2()
   //   printPattern3()
   //   printPattern4()
-  printPattern5()
+  //  printPattern5()
+  // printPattern6()
+  printPattern7()
 }
