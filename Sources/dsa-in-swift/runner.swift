@@ -48,7 +48,8 @@ func solveAndPrintValues() {
   //  sortStringDemo()
   // sortVowelsDemo()
   //  addStringsDemo()
-  factorialDemo()
+  // factorialDemo()
+  lengthOfLongestSubstringDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
