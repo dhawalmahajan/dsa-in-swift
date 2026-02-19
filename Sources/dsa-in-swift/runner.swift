@@ -50,7 +50,8 @@ func solveAndPrintValues() {
   //  addStringsDemo()
   // factorialDemo()
   // lengthOfLongestSubstringDemo()
-  secondLargestDemo()
+  // secondLargestDemo()
+  heapDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()

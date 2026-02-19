@@ -130,3 +130,24 @@ class Heap<T: Comparable> {
     return 2 * index + 2
   }
 }
+
+func heapDemo() {
+  let heap = Heap<Int>(ordering: .min)
+  heap.insert(5)
+  heap.insert(3)
+  heap.insert(8)
+  heap.insert(1)
+  print(heap.delete() ?? "Heap is empty")  // Output: 1
+  print(heap.peek ?? "Heap is empty")  // Output: 3
+  print(heap.sort())  // Output: [3, 5, 8]
+
+  let maxHeap = Heap<Int>(ordering: .max)
+  maxHeap.insert(5)
+  maxHeap.insert(3)
+  maxHeap.insert(8)
+  maxHeap.insert(1)
+  print(maxHeap.delete() ?? "Heap is empty")  // Output: 8
+  print(maxHeap.peek ?? "Heap is empty")  // Output: 5
+  print(maxHeap.sort())  // Output: [5, 3, 1]
+
+}
