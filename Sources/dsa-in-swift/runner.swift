@@ -38,7 +38,7 @@ func solveAndPrintValues() {
   // bubbleSortExample()
   // rotateArrayDemo()
   // possibleLootValueDemo()
-  editDistanceDemo()
+  // editDistanceDemo()
   // print(decimalToBinary(5))
   // runCycleDetectionExamples()
   // insertionSortExample()
@@ -54,6 +54,7 @@ func solveAndPrintValues() {
   // lengthOfLongestSubstringDemo()
   // secondLargestDemo()
   // heapDemo()
+  avlTreeExample()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()

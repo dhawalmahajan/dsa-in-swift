@@ -3,7 +3,8 @@ func binarySearch(_ nums: [Int], _ target: Int) -> Int {
   var right = nums.count - 1
 
   while left <= right {
-    let mid = (left + right) / 2
+    // let mid = (left + right) / 2
+    let mid = left + (right - left) / 2
     if nums[mid] == target { return mid }
     if nums[mid] < target {
       left = mid + 1
