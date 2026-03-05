@@ -54,7 +54,13 @@ func solveAndPrintValues() {
   // lengthOfLongestSubstringDemo()
   // secondLargestDemo()
   // heapDemo()
-  avlTreeExample()
+  // avlTreeExample()
+  // bucketSortDemo()
+  // heapSortDemo()
+  // insertionSortExample()
+  // quickSortDemo()
+  // mergeSortDemo()
+
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
