@@ -28,3 +28,8 @@ func countAndSay(_ n: Int) -> [Int] {
   }
   return res
 }
+
+func countAndSayDemo() {
+  let n = 5
+  print(countAndSay(n))
+}

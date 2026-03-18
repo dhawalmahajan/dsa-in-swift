@@ -60,7 +60,7 @@ func solveAndPrintValues() {
   // insertionSortExample()
   // quickSortDemo()
   // mergeSortDemo()
-
+  countAndSayDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
