@@ -33,7 +33,7 @@ func solveAndPrintValues() {
   // validLongParanthesisDemo()
   // anagramDemo()
   // finalPricesDemo()
-  // decodeXORArrayDemo()
+  decodeXORArrayDemo()
   // sumOfUniqueDemo()
   // bubbleSortExample()
   // rotateArrayDemo()
@@ -60,7 +60,7 @@ func solveAndPrintValues() {
   // insertionSortExample()
   // quickSortDemo()
   // mergeSortDemo()
-  countAndSayDemo()
+  // countAndSayDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
