@@ -1,6 +1,6 @@
-class LinkedList<Value: Equatable> {
-  var head: ListNode<Value>?
-  var tail: ListNode<Value>?
+class SinglyLinkedList<Value: Equatable> {
+  var head: SinglyListNode<Value>?
+  var tail: SinglyListNode<Value>?
   private let isCircular: Bool
   init(isCircular: Bool = false) {
     self.isCircular = isCircular
@@ -11,7 +11,7 @@ class LinkedList<Value: Equatable> {
   }
   // Insert: Adds to the start of the list - O(1)
   func insertAtHead(_ value: Value) {
-    let newNode = ListNode(value: value)
+    let newNode = SinglyListNode(value: value)
 
     if isEmpty {
       head = newNode
@@ -31,7 +31,7 @@ class LinkedList<Value: Equatable> {
   }
 
   func insertAtTail(_ value: Value) {
-    let newNode = ListNode(value: value)
+    let newNode = SinglyListNode(value: value)
 
     if isEmpty {
       insertAtHead(value)
@@ -62,7 +62,7 @@ class LinkedList<Value: Equatable> {
       currentIndex += 1
     }
 
-    let newNode = ListNode(value: value)
+    let newNode = SinglyListNode(value: value)
     newNode.next = current?.next
     current?.next = newNode
 
@@ -75,7 +75,7 @@ class LinkedList<Value: Equatable> {
   }
   // Append: Adds to the end of the list - O(1)
 
-  func find(value: Value) -> ListNode<Value>? {
+  func find(value: Value) -> SinglyListNode<Value>? {
     var current = head
 
     if isCircular {
@@ -133,7 +133,7 @@ class LinkedList<Value: Equatable> {
     if isEmpty { return }
 
     var current = head
-    var previous: ListNode<Value>?
+    var previous: SinglyListNode<Value>?
 
     if isCircular {
       repeat {
@@ -168,9 +168,9 @@ class LinkedList<Value: Equatable> {
     }
   }
   func reverse() {
-    var previous: ListNode<Value>?
+    var previous: SinglyListNode<Value>?
     var current = head
-    var next: ListNode<Value>?
+    var next: SinglyListNode<Value>?
     while current != nil {
       next = current?.next
       current?.next = previous

@@ -1,4 +1,4 @@
-private func detect(_ list: ListNode<Int>?) -> Bool {
+private func detect(_ list: SinglyListNode<Int>?) -> Bool {
   if list == nil {
     return false
   }
@@ -24,12 +24,12 @@ private func detect(_ list: ListNode<Int>?) -> Bool {
 }
 
 func detectCycleLoopAndLength() {
-  let list = ListNode<Int>(value: 1)
-  list.next = ListNode<Int>(value: 2)
-  let three = ListNode<Int>(value: 3)
+  let list = SinglyListNode<Int>(value: 1)
+  list.next = SinglyListNode<Int>(value: 2)
+  let three = SinglyListNode<Int>(value: 3)
   list.next?.next = three
-  list.next?.next?.next = ListNode<Int>(value: 4)
-  list.next?.next?.next?.next = ListNode<Int>(value: 5)
+  list.next?.next?.next = SinglyListNode<Int>(value: 4)
+  list.next?.next?.next?.next = SinglyListNode<Int>(value: 5)
   list.next?.next?.next?.next?.next = three
 
   print(detect(list))

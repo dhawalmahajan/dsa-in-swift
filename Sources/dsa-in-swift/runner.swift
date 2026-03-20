@@ -21,7 +21,7 @@ func solveAndPrintValues() {
   // print(firstUniqueChar(in: "interaction"))
   // print(validPalindrome("abca"))
   // print(romanToInt("MCMXCIV"))
-  // print(linkedList())
+  print(linkedList())
   // circularLinkedListDemo()
   // print(mergeLinkedLists())
   // detectLoopInLinkedList()
@@ -61,7 +61,7 @@ func solveAndPrintValues() {
   // quickSortDemo()
   // mergeSortDemo()
   // countAndSayDemo()
-  trieDemo()
+  // trieDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()

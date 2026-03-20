@@ -1,7 +1,9 @@
-private func mergeTwoList(_ l1: ListNode<Int>?, _ l2: ListNode<Int>?) -> ListNode<Int>? {
+private func mergeTwoList(_ l1: SinglyListNode<Int>?, _ l2: SinglyListNode<Int>?) -> SinglyListNode<
+  Int
+>? {
   var list1 = l1
   var list2 = l2
-  var result: ListNode<Int>? = ListNode<Int>(value: -1)
+  var result: SinglyListNode<Int>? = SinglyListNode<Int>(value: -1)
   var head = result
   while list1 != nil && list2 != nil {
     if let v1 = list1?.value, let v2 = list2?.value {
@@ -26,13 +28,13 @@ private func mergeTwoList(_ l1: ListNode<Int>?, _ l2: ListNode<Int>?) -> ListNod
 }
 
 func mergeLinkedLists() {
-  let list1 = ListNode<Int>(value: 1)
-  list1.next = ListNode<Int>(value: 2)
+  let list1 = SinglyListNode<Int>(value: 1)
+  list1.next = SinglyListNode<Int>(value: 2)
 
-  let list2 = ListNode<Int>(value: 3)
-  list2.next = ListNode<Int>(value: 4)
-  list2.next?.next = ListNode<Int>(value: 5)
-  list2.next?.next?.next = ListNode<Int>(value: 6)
+  let list2 = SinglyListNode<Int>(value: 3)
+  list2.next = SinglyListNode<Int>(value: 4)
+  list2.next?.next = SinglyListNode<Int>(value: 5)
+  list2.next?.next?.next = SinglyListNode<Int>(value: 6)
   let mergedList = mergeTwoList(list1, list2)
   var current = mergedList
   while current != nil {

@@ -2,7 +2,7 @@ func linkedList() {
   print("===== LINKED LIST DEMO =====")
 
   // Change isCircular to true to test Circular Linked List
-  let list = LinkedList<Int>(isCircular: false)
+  let list = SinglyLinkedList<Int>(isCircular: false)
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)
@@ -59,7 +59,7 @@ func linkedList() {
 func circularLinkedListDemo() {
   print("===== CIRCULAR LINKED LIST DEMO =====")
 
-  let list = LinkedList<Int>(isCircular: true)
+  let list = SinglyLinkedList<Int>(isCircular: true)
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)
