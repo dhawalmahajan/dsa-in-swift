@@ -1,8 +1,7 @@
 func singlyLinkedListDemo() {
   print("===== SINGLY LINKED LIST DEMO =====")
 
-  // Change isCircular to true to test Circular Linked List
-  let list = SinglyLinkedList<Int>(isCircular: false)
+  let list = SinglyLinkedList<Int>()
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)
@@ -59,7 +58,7 @@ func singlyLinkedListDemo() {
 func singlyCircularLinkedListDemo() {
   print("===== SINGLY CIRCULAR LINKED LIST DEMO =====")
 
-  let list = SinglyLinkedList<Int>(isCircular: true)
+  let list = CircularSinglyLinkedList<Int>()
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)
@@ -112,8 +111,7 @@ func singlyCircularLinkedListDemo() {
 func doublyLinkedListDemo() {
   print("===== DOUBLY LINKED LIST DEMO =====")
 
-  // Change isCircular to true to test Circular Doubly Linked List
-  let list = DoublyLinkedList<Int>(isCircular: false)
+  let list = DoublyLinkedList<Int>()
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)
@@ -170,7 +168,7 @@ func doublyLinkedListDemo() {
 func doublyCircularLinkedListDemo() {
   print("===== CIRCULAR DOUBLY LINKED LIST DEMO =====")
 
-  let list = DoublyLinkedList<Int>(isCircular: true)
+  let list = CircularDoublyLinkedList<Int>()
 
   print("\n➡️ Insert at Head")
   list.insertAtHead(5)

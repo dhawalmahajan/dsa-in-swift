@@ -1,11 +1,11 @@
-// Doubly linked list implementation with optional circular behavior
+// Doubly linked list implementation
 
-final class DoublyListNode<Value> {
+final class DoublyLinkedListNode<Value> {
   var value: Value
-  var next: DoublyListNode?
-  weak var prev: DoublyListNode?
+  var next: DoublyLinkedListNode?
+  weak var prev: DoublyLinkedListNode?
 
-  init(value: Value, next: DoublyListNode? = nil, prev: DoublyListNode? = nil) {
+  init(value: Value, next: DoublyLinkedListNode? = nil, prev: DoublyLinkedListNode? = nil) {
     self.value = value
     self.next = next
     self.prev = prev
@@ -13,68 +13,29 @@ final class DoublyListNode<Value> {
 }
 
 class DoublyLinkedList<Value: Equatable> {
-  var head: DoublyListNode<Value>?
-  var tail: DoublyListNode<Value>?
-  private let isCircular: Bool
-
-  init(isCircular: Bool = false) {
-    self.isCircular = isCircular
-  }
+  var head: DoublyLinkedListNode<Value>?
+  var tail: DoublyLinkedListNode<Value>?
 
   var isEmpty: Bool { head == nil }
 
-  private func connectEndsIfCircular() {
-    guard isCircular, let head = head, let tail = tail else { return }
-    head.prev = tail
-    tail.next = head
-  }
-
-  private func disconnectEndsIfNonCircular() {
-    guard !isCircular else { return }
-    head?.prev = nil
-    tail?.next = nil
-  }
-
   func insertAtHead(_ value: Value) {
-    let node = DoublyListNode(value: value)
-
-    if isEmpty {
-      head = node
-      tail = node
-      if isCircular { connectEndsIfCircular() }
-      return
-    }
-
+    let node = DoublyLinkedListNode(value: value)
     node.next = head
     head?.prev = node
     head = node
-
-    if isCircular {
-      connectEndsIfCircular()
-    } else {
-      disconnectEndsIfNonCircular()
-    }
+    if tail == nil { tail = node }
   }
 
   func insertAtTail(_ value: Value) {
-    let node = DoublyListNode(value: value)
-
-    if isEmpty {
+    let node = DoublyLinkedListNode(value: value)
+    guard let tailNode = tail else {
       head = node
       tail = node
-      if isCircular { connectEndsIfCircular() }
       return
     }
-
-    tail?.next = node
-    node.prev = tail
+    tailNode.next = node
+    node.prev = tailNode
     tail = node
-
-    if isCircular {
-      connectEndsIfCircular()
-    } else {
-      disconnectEndsIfNonCircular()
-    }
   }
 
   func insert(_ value: Value, at index: Int) {
@@ -86,9 +47,7 @@ class DoublyLinkedList<Value: Equatable> {
 
     var current = head
     var i = 0
-
     while i < index - 1, current != nil {
-      if isCircular, current?.next === head { break }
       current = current?.next
       i += 1
     }
@@ -103,123 +62,73 @@ class DoublyLinkedList<Value: Equatable> {
       return
     }
 
-    let newNode = DoublyListNode(value: value, next: prevNode.next, prev: prevNode)
+    let newNode = DoublyLinkedListNode(value: value, next: prevNode.next, prev: prevNode)
     prevNode.next?.prev = newNode
     prevNode.next = newNode
-
-    if isCircular {
-      connectEndsIfCircular()
-    }
   }
 
-  func find(value: Value) -> DoublyListNode<Value>? {
+  func find(value: Value) -> DoublyLinkedListNode<Value>? {
     var current = head
-
-    if isCircular {
-      guard current != nil else { return nil }
-      repeat {
-        if current?.value == value { return current }
-        current = current?.next
-      } while current !== head
-      return nil
+    while let node = current {
+      if node.value == value { return node }
+      current = node.next
     }
-
-    while current != nil {
-      if current?.value == value { return current }
-      current = current?.next
-    }
-
     return nil
   }
 
   func deleteHead() {
-    guard !isEmpty else { return }
-
+    guard let oldHead = head else { return }
     if head === tail {
       head = nil
       tail = nil
       return
     }
-
-    head = head?.next
-    if isCircular {
-      head?.prev = tail
-      connectEndsIfCircular()
-    } else {
-      head?.prev = nil
-      disconnectEndsIfNonCircular()
-    }
+    head = oldHead.next
+    head?.prev = nil
   }
 
   func deleteTail() {
-    guard !isEmpty else { return }
-
+    guard let oldTail = tail else { return }
     if head === tail {
       head = nil
       tail = nil
       return
     }
-
-    tail = tail?.prev
-    if isCircular {
-      tail?.next = head
-      connectEndsIfCircular()
-    } else {
-      tail?.next = nil
-      disconnectEndsIfNonCircular()
-    }
+    tail = oldTail.prev
+    tail?.next = nil
   }
 
   func delete(value: Value) {
     guard let node = find(value: value) else { return }
-
     if node === head {
       deleteHead()
       return
     }
-
     if node === tail {
       deleteTail()
       return
     }
-
     node.prev?.next = node.next
     node.next?.prev = node.prev
-
-    if isCircular {
-      connectEndsIfCircular()
-    }
   }
 
   func reverse() {
-    guard !isEmpty else { return }
+    if head == nil { return }
 
-    let originalHead = head
-    let originalTail = tail
     var current = head
+    var prev: DoublyLinkedListNode<Value>? = nil
 
-    if isCircular {
-      repeat {
-        guard let node = current else { break }
-
-        swap(&node.next, &node.prev)
-        current = node.prev
-      } while current !== originalHead
-
-      head = originalTail
-      tail = originalHead
-      connectEndsIfCircular()
-      return
+    while current != nil {
+      let next = current!.next
+      current!.next = prev
+      current!.prev = next
+      prev = current
+      current = next
     }
 
-    while let node = current {
-      swap(&node.next, &node.prev)
-      current = node.prev
-    }
-
+    // Now prev is the new head, and head is the new tail
     tail = head
-    head = originalTail
-    disconnectEndsIfNonCircular()
+    head = prev
   }
 
   func printList() {
@@ -229,21 +138,10 @@ class DoublyLinkedList<Value: Equatable> {
     }
 
     var current = head
-
-    if isCircular {
-      repeat {
-        print(current!.value, terminator: " <-> ")
-        current = current?.next
-      } while current !== head
-      print("(back to head)")
-      return
+    while let node = current {
+      print(node.value, terminator: " <-> ")
+      current = node.next
     }
-
-    while current != nil {
-      print(current!.value, terminator: " <-> ")
-      current = current?.next
-    }
-
     print("nil")
   }
 }

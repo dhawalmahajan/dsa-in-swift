@@ -1,26 +1,38 @@
-class SinglyLinkedList<Value: Equatable> {
-  var head: SinglyListNode<Value>?
-  var tail: SinglyListNode<Value>?
+// Circular Singly Linked List implementation
 
-  var isEmpty: Bool {
-    return head == nil
+final class CircularSinglyListNode<Value> {
+  var value: Value
+  var next: CircularSinglyListNode?
+
+  init(value: Value, next: CircularSinglyListNode? = nil) {
+    self.value = value
+    self.next = next
   }
+}
+
+class CircularSinglyLinkedList<Value: Equatable> {
+  var head: CircularSinglyListNode<Value>?
+  var tail: CircularSinglyListNode<Value>?
+
+  var isEmpty: Bool { head == nil }
 
   func insertAtHead(_ value: Value) {
-    let newNode = SinglyListNode(value: value)
+    let newNode = CircularSinglyListNode(value: value)
 
     if isEmpty {
       head = newNode
       tail = newNode
+      newNode.next = newNode
       return
     }
 
     newNode.next = head
     head = newNode
+    tail?.next = head
   }
 
   func insertAtTail(_ value: Value) {
-    let newNode = SinglyListNode(value: value)
+    let newNode = CircularSinglyListNode(value: value)
 
     if isEmpty {
       insertAtHead(value)
@@ -29,6 +41,7 @@ class SinglyLinkedList<Value: Equatable> {
 
     tail?.next = newNode
     tail = newNode
+    tail?.next = head
   }
 
   func insert(_ value: Value, at index: Int) {
@@ -42,29 +55,32 @@ class SinglyLinkedList<Value: Equatable> {
     var current = head
     var currentIndex = 0
 
-    while currentIndex < index - 1 && current?.next != nil {
+    while currentIndex < index - 1 && current?.next !== head {
       current = current?.next
       currentIndex += 1
     }
 
-    let newNode = SinglyListNode(value: value)
+    let newNode = CircularSinglyListNode(value: value)
     newNode.next = current?.next
     current?.next = newNode
 
     if current === tail {
       tail = newNode
+      tail?.next = head
     }
   }
 
-  func find(value: Value) -> SinglyListNode<Value>? {
+  func find(value: Value) -> CircularSinglyListNode<Value>? {
     var current = head
 
-    while current != nil {
+    if current == nil { return nil }
+
+    repeat {
       if current?.value == value {
         return current
       }
       current = current?.next
-    }
+    } while current !== head
 
     return nil
   }
@@ -79,6 +95,7 @@ class SinglyLinkedList<Value: Equatable> {
     }
 
     head = head?.next
+    tail?.next = head
   }
 
   func deleteTail() {
@@ -95,7 +112,7 @@ class SinglyLinkedList<Value: Equatable> {
       current = current?.next
     }
 
-    current?.next = nil
+    current?.next = head
     tail = current
   }
 
@@ -103,9 +120,9 @@ class SinglyLinkedList<Value: Equatable> {
     if isEmpty { return }
 
     var current = head
-    var previous: SinglyListNode<Value>?
+    var previous: CircularSinglyListNode<Value>?
 
-    while current != nil {
+    repeat {
       if current?.value == value {
         if current === head {
           deleteHead()
@@ -118,34 +135,41 @@ class SinglyLinkedList<Value: Equatable> {
       }
       previous = current
       current = current?.next
-    }
+    } while current !== head
   }
 
   func reverse() {
-    var previous: SinglyListNode<Value>?
+    if isEmpty || head === tail { return }
+
+    var previous: CircularSinglyListNode<Value>?
     var current = head
-    var next: SinglyListNode<Value>?
-    while current != nil {
+    var next: CircularSinglyListNode<Value>?
+
+    repeat {
       next = current?.next
       current?.next = previous
       previous = current
       current = next
-    }
+    } while current !== head
+
     head = previous
+    tail = current?.next
+    tail?.next = head
   }
 
   func printList() {
     if isEmpty {
-      print("Empty list")
+      print("Empty circular singly linked list")
       return
     }
 
     var current = head
 
-    while current != nil {
+    repeat {
       print(current!.value, terminator: " -> ")
       current = current?.next
-    }
-    print("nil")
+    } while current !== head
+
+    print("(back to head)")
   }
 }
