@@ -1,15 +1,5 @@
 // Circular Singly Linked List implementation
 
-final class CircularSinglyListNode<Value> {
-  var value: Value
-  var next: CircularSinglyListNode?
-
-  init(value: Value, next: CircularSinglyListNode? = nil) {
-    self.value = value
-    self.next = next
-  }
-}
-
 class CircularSinglyLinkedList<Value: Equatable> {
   var head: CircularSinglyListNode<Value>?
   var tail: CircularSinglyListNode<Value>?
