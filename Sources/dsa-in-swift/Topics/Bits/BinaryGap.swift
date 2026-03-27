@@ -34,19 +34,22 @@ Constraints:
 */
 
 private func binaryGap(_ n: Int) -> Int {
-  var n = n
-  var last = -1
-  var maxGap = 0
-  var i = 0
-  while n > 0 {
-    if (n & 1) == 1 {
-      if last != -1 {
-        maxGap = max(maxGap, i - last)
-      }
-      last = i
+  let str = String(n, radix: 2)
+  var maxLength = 0
+  var length = 0
+
+  for c in str {
+    if c == "0" {
+      length += 1
+    } else {
+      maxLength = max(maxLength, length)
+      length = 0
     }
-    n >>= 1
-    i += 1
   }
-  return maxGap
+  return maxLength
+}
+
+func binaryGapDemo() {
+  let n = 1041
+  print(binaryGap(n))
 }
