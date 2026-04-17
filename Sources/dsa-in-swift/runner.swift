@@ -65,7 +65,8 @@ func solveAndPrintValues() {
   // mergeSortDemo()
   // countAndSayDemo()
   // trieDemo()
-  binaryGapDemo()
+  // binaryGapDemo()
+  printGridDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
@@ -80,5 +81,6 @@ func solveSystemDesignDemo() {
   // abstractFactoryDemo()
 
   // simpleSingletonDemo()
+  tomatoAppDemo()
 
 }
