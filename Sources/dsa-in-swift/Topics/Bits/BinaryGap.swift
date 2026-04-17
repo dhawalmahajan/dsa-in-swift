@@ -50,6 +50,6 @@ private func binaryGap(_ n: Int) -> Int {
 }
 
 func binaryGapDemo() {
-  let n = 1041
+  let n = 19
   print(binaryGap(n))
 }
