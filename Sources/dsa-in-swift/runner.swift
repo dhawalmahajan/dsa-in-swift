@@ -83,6 +83,7 @@ func solveSystemDesignDemo() {
   // abstractFactoryDemo()
 
   // simpleSingletonDemo()
-  tomatoAppDemo()
+  // tomatoAppDemo()
+  decoratorPatternDemo()
 
 }
