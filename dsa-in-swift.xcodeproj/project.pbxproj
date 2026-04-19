@@ -3,10 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02D8C6AA2F93C34A002DA8BA /* TomatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A82F93C349002DA8BA /* TomatoApp.swift */; };
+		02D8C6AB2F93C34A002DA8BA /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6982F93C349002DA8BA /* OrderManager.swift */; };
+		02D8C6AC2F93C34A002DA8BA /* NowOrderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6942F93C349002DA8BA /* NowOrderFactory.swift */; };
+		02D8C6AD2F93C34A002DA8BA /* ScheduledOrderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6962F93C349002DA8BA /* ScheduledOrderFactory.swift */; };
+		02D8C6AE2F93C34A002DA8BA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C69B2F93C349002DA8BA /* MenuItem.swift */; };
+		02D8C6AF2F93C34A002DA8BA /* CreditCardPaymentStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A22F93C349002DA8BA /* CreditCardPaymentStrategy.swift */; };
+		02D8C6B02F93C34A002DA8BA /* PaymentStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A32F93C349002DA8BA /* PaymentStrategy.swift */; };
+		02D8C6B12F93C34A002DA8BA /* UpiPaymentStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A42F93C349002DA8BA /* UpiPaymentStrategy.swift */; };
+		02D8C6B22F93C34A002DA8BA /* OrderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6952F93C349002DA8BA /* OrderFactory.swift */; };
+		02D8C6B32F93C34A002DA8BA /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C69D2F93C349002DA8BA /* Restaurant.swift */; };
+		02D8C6B42F93C34A002DA8BA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C69C2F93C349002DA8BA /* Order.swift */; };
+		02D8C6B52F93C34A002DA8BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C69E2F93C349002DA8BA /* User.swift */; };
+		02D8C6B62F93C34A002DA8BA /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A62F93C349002DA8BA /* TimeUtils.swift */; };
+		02D8C6B72F93C34A002DA8BA /* RestaurantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6992F93C349002DA8BA /* RestaurantManager.swift */; };
+		02D8C6B82F93C34A002DA8BA /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6A02F93C349002DA8BA /* NotificationService.swift */; };
+		02D8C6BA2F93C365002DA8BA /* DecoratorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8C6B92F93C365002DA8BA /* DecoratorPattern.swift */; };
 		04B69C5DFCD6901E1E75D86A /* Encapsulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C30F7FF02958602A183F5 /* Encapsulation.swift */; };
 		04E4220AACFFEF636B255871 /* DynamicPolymorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C062A41579D95212255B74 /* DynamicPolymorphism.swift */; };
 		08A8F975291FA3F0BB3751A4 /* BinaryGap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F22282756E7746BBA920FC /* BinaryGap.swift */; };
@@ -127,6 +143,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02D8C6942F93C349002DA8BA /* NowOrderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowOrderFactory.swift; sourceTree = "<group>"; };
+		02D8C6952F93C349002DA8BA /* OrderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFactory.swift; sourceTree = "<group>"; };
+		02D8C6962F93C349002DA8BA /* ScheduledOrderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledOrderFactory.swift; sourceTree = "<group>"; };
+		02D8C6982F93C349002DA8BA /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		02D8C6992F93C349002DA8BA /* RestaurantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManager.swift; sourceTree = "<group>"; };
+		02D8C69B2F93C349002DA8BA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		02D8C69C2F93C349002DA8BA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		02D8C69D2F93C349002DA8BA /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		02D8C69E2F93C349002DA8BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		02D8C6A02F93C349002DA8BA /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		02D8C6A22F93C349002DA8BA /* CreditCardPaymentStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardPaymentStrategy.swift; sourceTree = "<group>"; };
+		02D8C6A32F93C349002DA8BA /* PaymentStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentStrategy.swift; sourceTree = "<group>"; };
+		02D8C6A42F93C349002DA8BA /* UpiPaymentStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpiPaymentStrategy.swift; sourceTree = "<group>"; };
+		02D8C6A62F93C349002DA8BA /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
+		02D8C6A82F93C349002DA8BA /* TomatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoApp.swift; sourceTree = "<group>"; };
+		02D8C6B92F93C365002DA8BA /* DecoratorPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorPattern.swift; sourceTree = "<group>"; };
 		02EA9A04720F2CE87AEDEAEE /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		036B1241E9C48BFAFB56F1F6 /* SmallestDistinctWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallestDistinctWindow.swift; sourceTree = "<group>"; };
 		04449D51C41BCEABA5F3E5C4 /* LongestValidParantheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestValidParantheses.swift; sourceTree = "<group>"; };
@@ -215,7 +247,7 @@
 		D67255487513A27918BD7E8F /* Merge-two-sorted-list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Merge-two-sorted-list.swift"; sourceTree = "<group>"; };
 		D775C2F4D9D3BE3CF4A0C276 /* isSubSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isSubSequence.swift; sourceTree = "<group>"; };
 		D9D3C95C9EA25D7AA920DF57 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		DA9C53523AE5E3512DF73408 /* dsa_in_swift */ = {isa = PBXFileReference; includeInIndex = 0; path = dsa_in_swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C53523AE5E3512DF73408 /* dsa_in_swift */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = text; path = dsa_in_swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2FD9B067370EB8A7337BC8 /* Detect-loop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detect-loop.swift"; sourceTree = "<group>"; };
 		DB805627C32D8818DEFD9764 /* LiskovSubtitution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiskovSubtitution.swift; sourceTree = "<group>"; };
 		DF15B3C46718B300BC7763F1 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
@@ -246,6 +278,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D8C6972F93C349002DA8BA /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6942F93C349002DA8BA /* NowOrderFactory.swift */,
+				02D8C6952F93C349002DA8BA /* OrderFactory.swift */,
+				02D8C6962F93C349002DA8BA /* ScheduledOrderFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		02D8C69A2F93C349002DA8BA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6982F93C349002DA8BA /* OrderManager.swift */,
+				02D8C6992F93C349002DA8BA /* RestaurantManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		02D8C69F2F93C349002DA8BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C69B2F93C349002DA8BA /* MenuItem.swift */,
+				02D8C69C2F93C349002DA8BA /* Order.swift */,
+				02D8C69D2F93C349002DA8BA /* Restaurant.swift */,
+				02D8C69E2F93C349002DA8BA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02D8C6A12F93C349002DA8BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6A02F93C349002DA8BA /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		02D8C6A52F93C349002DA8BA /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6A22F93C349002DA8BA /* CreditCardPaymentStrategy.swift */,
+				02D8C6A32F93C349002DA8BA /* PaymentStrategy.swift */,
+				02D8C6A42F93C349002DA8BA /* UpiPaymentStrategy.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		02D8C6A72F93C349002DA8BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6A62F93C349002DA8BA /* TimeUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		02D8C6A92F93C349002DA8BA /* Tomato */ = {
+			isa = PBXGroup;
+			children = (
+				02D8C6972F93C349002DA8BA /* Factories */,
+				02D8C69A2F93C349002DA8BA /* Managers */,
+				02D8C69F2F93C349002DA8BA /* Models */,
+				02D8C6A12F93C349002DA8BA /* Services */,
+				02D8C6A52F93C349002DA8BA /* Strategies */,
+				02D8C6A72F93C349002DA8BA /* Utils */,
+				02D8C6A82F93C349002DA8BA /* TomatoApp.swift */,
+			);
+			path = Tomato;
+			sourceTree = "<group>";
+		};
 		1B39F81A6D10261B74CB1783 /* InfoPlists */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +522,7 @@
 		8DEDB5A35D21F4B81D17305A /* LLD */ = {
 			isa = PBXGroup;
 			children = (
+				02D8C6A92F93C349002DA8BA /* Tomato */,
 				A2188248554B6BC204C89395 /* DesignPatterns */,
 				1BC31E64088C4EB20356C3D4 /* SOLID Principles */,
 				7A20B7F2AD8DF0844E7B03E4 /* Abstraction.swift */,
@@ -460,6 +563,7 @@
 		A2188248554B6BC204C89395 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				02D8C6B92F93C365002DA8BA /* DecoratorPattern.swift */,
 				D22CEADC0456ADEDA19C5F50 /* AbstractFactory.swift */,
 				EE06AF050DFF14141714D7A6 /* ObserverPattern.swift */,
 				27B614F16C17A0D0B64173A1 /* SimpleSingleton.swift */,
@@ -628,8 +732,6 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = CBDE455D0566DC6877EC8DDE /* Build configuration list for PBXProject "dsa-in-swift" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -722,6 +824,21 @@
 				71B906B07EE018FA7E2D46D3 /* SinglyLinkedList.swift in Sources */,
 				C427B37AF452780DBAFD8A34 /* Merge-two-sorted-list.swift in Sources */,
 				11832F0F8EE2D560E3EA2F37 /* findStartCycle.swift in Sources */,
+				02D8C6AA2F93C34A002DA8BA /* TomatoApp.swift in Sources */,
+				02D8C6AB2F93C34A002DA8BA /* OrderManager.swift in Sources */,
+				02D8C6AC2F93C34A002DA8BA /* NowOrderFactory.swift in Sources */,
+				02D8C6AD2F93C34A002DA8BA /* ScheduledOrderFactory.swift in Sources */,
+				02D8C6AE2F93C34A002DA8BA /* MenuItem.swift in Sources */,
+				02D8C6AF2F93C34A002DA8BA /* CreditCardPaymentStrategy.swift in Sources */,
+				02D8C6B02F93C34A002DA8BA /* PaymentStrategy.swift in Sources */,
+				02D8C6B12F93C34A002DA8BA /* UpiPaymentStrategy.swift in Sources */,
+				02D8C6B22F93C34A002DA8BA /* OrderFactory.swift in Sources */,
+				02D8C6B32F93C34A002DA8BA /* Restaurant.swift in Sources */,
+				02D8C6B42F93C34A002DA8BA /* Order.swift in Sources */,
+				02D8C6B52F93C34A002DA8BA /* User.swift in Sources */,
+				02D8C6B62F93C34A002DA8BA /* TimeUtils.swift in Sources */,
+				02D8C6B72F93C34A002DA8BA /* RestaurantManager.swift in Sources */,
+				02D8C6B82F93C34A002DA8BA /* NotificationService.swift in Sources */,
 				F2F8B452E920F6A34FBF9724 /* DecimalToBinary.swift in Sources */,
 				C4E40DD56640596D9355CAF3 /* FactorialLargeNumber.swift in Sources */,
 				B3E44917BA1B53593D2A0DB1 /* PatternPrinting.swift in Sources */,
@@ -755,6 +872,7 @@
 				62841959E7CD83FE35AF6473 /* RomanToInt.swift in Sources */,
 				17C3C62616532834E52A45CE /* SortSentences.swift in Sources */,
 				40B3D65B5887770B6D46CC08 /* SortString.swift in Sources */,
+				02D8C6BA2F93C365002DA8BA /* DecoratorPattern.swift in Sources */,
 				61AD3976AD21678090E48356 /* SortVowel.swift in Sources */,
 				CE49AED1FEF2C3A2BB420A01 /* ValidPalindrome.swift in Sources */,
 				B66C2FC4C65CBBB6AA61D7B7 /* firstUniqueCharInString.swift in Sources */,
@@ -835,16 +953,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-package-name",
-					"dsa-in-swift",
-				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -package-name dsa-in-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					SWIFT_PACKAGE,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_SUPPRESS_WARNINGS = YES;
 				USE_HEADERMAP = NO;
 			};
@@ -856,11 +967,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				INFOPLIST_FILE = "Derived/InfoPlists/dsa-in-swift-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Onone",
-					"-g",
-				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Onone -g";
 				PRODUCT_BUNDLE_IDENTIFIER = "dsa-in-swift";
 				PRODUCT_NAME = dsa_in_swift;
 				SDKROOT = macosx;
@@ -876,18 +983,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				INFOPLIST_FILE = "Derived/InfoPlists/dsa-in-swift-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-Onone",
-					"-g",
-				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Onone -g";
 				PRODUCT_BUNDLE_IDENTIFIER = "dsa-in-swift";
 				PRODUCT_NAME = dsa_in_swift;
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -951,16 +1051,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_SWIFT_FLAGS = (
-					"$(inherited)",
-					"-package-name",
-					"dsa-in-swift",
-				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -package-name dsa-in-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					SWIFT_PACKAGE,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_SUPPRESS_WARNINGS = YES;
 				USE_HEADERMAP = NO;
 				VALIDATE_PRODUCT = YES;

@@ -82,8 +82,8 @@ func solveSystemDesignDemo() {
   // strategyDesignPatternDemo()
   // abstractFactoryDemo()
 
-  // simpleSingletonDemo()
-  // tomatoAppDemo()
-  decoratorPatternDemo()
+//   simpleSingletonDemo()
+   tomatoAppDemo()
+//  decoratorPatternDemo()
 
 }
