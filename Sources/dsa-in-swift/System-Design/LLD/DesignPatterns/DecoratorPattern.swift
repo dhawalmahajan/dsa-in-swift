@@ -1,22 +1,22 @@
 import Foundation
 
 // Component Protocol
-protocol Character {
+protocol DecoratableCharacter {
   func getAbilities() -> String
 }
 
 // Concrete Component
-class Mario: Character {
+class Mario: DecoratableCharacter {
   func getAbilities() -> String {
     return "Mario"
   }
 }
 
 // Abstract Decorator
-class CharacterDecorator: Character {
-  let character: Character
+class CharacterDecorator: DecoratableCharacter {
+  let character: DecoratableCharacter
 
-  init(_ character: Character) {
+  init(_ character: DecoratableCharacter) {
     self.character = character
   }
 
@@ -52,7 +52,7 @@ class StarPowerUp: CharacterDecorator {
 
 func decoratorPatternDemo() {
   // Usage
-  var mario: Character = Mario()
+  var mario: DecoratableCharacter = Mario()
   print("Basic Character:", mario.getAbilities())
 
   mario = HeightUp(mario)
