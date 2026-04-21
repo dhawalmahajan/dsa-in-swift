@@ -67,7 +67,8 @@ func solveAndPrintValues() {
   // trieDemo()
   // binaryGapDemo()
   // printGridDemo()
-  fibbonacciDemo()
+  // fibbonacciDemo()
+  climbStairsDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
