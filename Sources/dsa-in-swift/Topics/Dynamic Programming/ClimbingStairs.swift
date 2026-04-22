@@ -32,6 +32,7 @@ private func recursive(_ i: Int, _ n: Int) -> Int {
   if i > n { return 0 }
   return recursive(i + 1, n) + recursive(i + 2, n)
 }
+//MARK: TOP DOWN Approch
 private func dpTopDownApproch(_ i: Int, _ n: Int) -> Int {
   var dp: [Int] = Array(repeating: -1, count: n + 2)
   if i == n { return 1 }
@@ -42,9 +43,34 @@ private func dpTopDownApproch(_ i: Int, _ n: Int) -> Int {
   dp[i] = recursive(i + 1, n) + recursive(i + 2, n)
   return dp[i]
 }
+//MARK: BOTTOM UP Approch
+private func dpBottomUpApproch(_ n: Int) -> Int {
+  var dp: [Int] = Array(repeating: -1, count: n + 2)
+  dp[n] = 1
+  dp[n+1] = 0
+  for i in stride(from: n-1, through: 0, by: -1 ) {
+    dp[i] = dp[i+1] + dp[i+2]  
+  }
+  return dp[0]
+}
+//MARK: Space optimization Approch
+private func dpSpaceOptimizeApproch(_ n: Int) -> Int {
+  var curr = 1
+  var next1 = 1
+  var next2 = 0
+
+  for _ in stride(from: n-1, through: 0, by: -1) {
+    curr = next1 + next2
+    next2 = next1
+    next1 = curr
+  }
+  return curr
+}
 private func climbStairs(_ n: Int) -> Int {
   //   return recursive(0, n)
-  return dpTopDownApproch(0, n)
+  // return dpTopDownApproch(0, n)
+  // return dpBottomUpApproch(n)
+  return dpSpaceOptimizeApproch(n)
 
 }
 
