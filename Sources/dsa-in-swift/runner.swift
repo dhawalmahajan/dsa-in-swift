@@ -68,7 +68,8 @@ func solveAndPrintValues() {
   // binaryGapDemo()
   // printGridDemo()
   // fibbonacciDemo()
-  climbStairsDemo()
+  // climbStairsDemo()
+  adjacencyMatrixDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
@@ -82,8 +83,8 @@ func solveSystemDesignDemo() {
   // strategyDesignPatternDemo()
   // abstractFactoryDemo()
 
-//   simpleSingletonDemo()
-   tomatoAppDemo()
-//  decoratorPatternDemo()
+  //   simpleSingletonDemo()
+  tomatoAppDemo()
+  //  decoratorPatternDemo()
 
 }
