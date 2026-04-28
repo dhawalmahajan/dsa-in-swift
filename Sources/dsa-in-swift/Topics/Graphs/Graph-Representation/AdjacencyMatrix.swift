@@ -33,5 +33,5 @@ private func adjacencyMatrixDemo(isDirected: Bool = false, isWeighted: Bool = fa
 }
 
 public func adjacencyMatrixDemo() {
-  adjacencyMatrixDemo(isDirected: false, isWeighted: true)
+  adjacencyMatrixDemo(isDirected: false, isWeighted: false)
 }

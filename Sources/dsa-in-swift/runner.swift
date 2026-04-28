@@ -69,7 +69,8 @@ func solveAndPrintValues() {
   // printGridDemo()
   // fibbonacciDemo()
   // climbStairsDemo()
-  adjacencyMatrixDemo()
+//  adjacencyMatrixDemo()
+    adjacencyListDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
