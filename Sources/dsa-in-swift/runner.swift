@@ -71,6 +71,7 @@ func solveAndPrintValues() {
   // climbStairsDemo()
 //  adjacencyMatrixDemo()
     adjacencyListDemo()
+    dfsDemo()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
