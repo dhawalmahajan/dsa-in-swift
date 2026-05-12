@@ -14,6 +14,29 @@ private func detectCycleUsingDFS(node: Int, parent: Int, adj: [[Int]], visited: 
     return false
 }
 
+private func isCycleUsingBFS(_v: Int, adj: [[Int]]) -> Bool {
+    var visited:[Bool] = Array(repeating: false, count: v)
+    for i in 0..<v {
+        if !visited[i] {
+            if detectCycle(startNode: i, adj: adj, visited: &visited) {
+                return true
+            }
+        }
+    }
+    return false
+}
+
+private func detectCycle(adj:  [[Int]],inout visited: [Bool]) -> Bool {
+    
+    var queue:[(Int, Int)] = []
+    visited[0] = true
+    queue.append((0,-1))
+    while !queue.isEmpty {
+        let (node,parent) = queue.removeFirst() 
+        
+    }
+}
+
 func detectCycleDemoUsingDFS() {
         // Data Setup
     let nodeCount = 4
