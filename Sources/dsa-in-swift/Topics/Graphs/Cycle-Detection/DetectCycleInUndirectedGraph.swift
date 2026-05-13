@@ -1,4 +1,6 @@
-private func detectCycleUsingDFS(node: Int, parent: Int, adj: [[Int]], visited: inout [Bool]) -> Bool {
+//MARK: DFS Method
+
+private func cycleDetect(_ node: Int,_ parent: Int, adj: [[Int]], visited: inout [Bool]) -> Bool {
     visited[node] = true
     for neighbour in adj[node] {
         if parent == neighbour {
@@ -7,34 +9,21 @@ private func detectCycleUsingDFS(node: Int, parent: Int, adj: [[Int]], visited: 
         if visited[neighbour] == true {
             return true
         }
-        if detectCycle(node: neighbour, parent: node, adj: adj, visited: &visited) == true {
+        if cycleDetect(neighbour, node, adj: adj, visited: &visited) == true {
             return true
         }
     }
     return false
 }
 
-private func isCycleUsingBFS(_v: Int, adj: [[Int]]) -> Bool {
+private func isCycleUsingDFS(_v: Int,_ adj: [[Int]]) -> Bool {
     var visited:[Bool] = Array(repeating: false, count: v)
     for i in 0..<v {
-        if !visited[i] {
-            if detectCycle(startNode: i, adj: adj, visited: &visited) {
-                return true
-            }
+        if !visited[i] && cycleDetect(i, -1, adj: adj, visited: &visited){
+            return true
         }
     }
     return false
-}
-
-private func detectCycle(adj:  [[Int]],inout visited: [Bool]) -> Bool {
-    
-    var queue:[(Int, Int)] = []
-    visited[0] = true
-    queue.append((0,-1))
-    while !queue.isEmpty {
-        let (node,parent) = queue.removeFirst() 
-        
-    }
 }
 
 func detectCycleDemoUsingDFS() {
@@ -46,14 +35,23 @@ func detectCycleDemoUsingDFS() {
         [0, 1, 3], // Neighbors of node 2
         [2]        // Neighbors of node 3
     ]
-
-    var visited = Array(repeating: false, count: nodeCount)
-    for i in 0..<nodeCount {
-        if !visited[i] && detectCycleUsingDFS(node: i, parent: -1, adj: adj, visited: &visited){
-            print("Cycle detected") // Should print true
-        } else {
-            print("Cycle not detected") // Should print true
-        }
+    let result = isCycleUsingDFS(nodeCount, adj)
+    if result == true {
+        print("Cycle detected")
+    } else {
+        print("Cycle not detected")
     }
-
 }
+
+//MARK: BFS Method
+private func detectCycle(adj:  [[Int]],inout visited: [Bool]) -> Bool {
+    
+    var queue:[(Int, Int)] = []
+    visited[0] = true
+    queue.append((0,-1))
+    while !queue.isEmpty {
+        let (node,parent) = queue.removeFirst() 
+        
+    }
+}
+
