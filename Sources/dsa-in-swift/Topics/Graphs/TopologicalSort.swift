@@ -5,6 +5,7 @@
 //  Created by Dhawal Mahajan on 14/05/26.
 //
 
+//MARK: DFS
 private func topologicalSortUsingDFS(v: Int, adj: [[Int]]) -> [Int] {
     var visited: [Bool] = Array(repeating: false, count: v)
     var stack: [Int] = []
@@ -41,5 +42,33 @@ func topologicalSortDemoDFS() {
         [0,2]   // 5
     ]
     let result = topologicalSortUsingDFS(v: v, adj: adj)
-    print(result)
+    let result2 = topologicalSortUsingKahnAlgorithm(v: v, adj: adj)
+    print(result2)
+}
+//MARK: Kahn's Algorithm
+private func topologicalSortUsingKahnAlgorithm(v: Int, adj: [[Int]]) -> [Int] {
+    var ans: [Int] = []
+    var indegree = Array(repeating: 0, count: v)
+    for i in 0..<v {
+        for neighbour in adj[i] {
+            indegree[neighbour] += 1
+        }
+    }
+    var queue: [Int] = []
+    for i in 0..<v {
+        if (indegree[i] == 0) {
+            queue.append(i)
+        }
+    }
+    while !queue.isEmpty {
+        let node = queue.removeFirst()
+        ans.append(node)
+        for neighbour in adj[node] {
+            indegree[neighbour] -= 1
+            if indegree[neighbour] == 0 {
+                queue.append(neighbour)
+            }
+        }
+    }
+    return ans
 }
