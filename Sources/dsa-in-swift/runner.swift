@@ -72,8 +72,9 @@ func solveAndPrintValues() {
   //  adjacencyMatrixDemo()
   // adjacencyListDemo()
   // dfsDemo()
-    detectCycleUsingBFS()
+   // detectCycleUsingBFS()
     //detectCycleDemoUsingDFS()
+    topologicalSortDemoDFS()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
