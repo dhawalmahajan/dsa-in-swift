@@ -69,9 +69,11 @@ func solveAndPrintValues() {
   // printGridDemo()
   // fibbonacciDemo()
   // climbStairsDemo()
-//  adjacencyMatrixDemo()
-    adjacencyListDemo()
-    dfsDemo()
+  //  adjacencyMatrixDemo()
+  // adjacencyListDemo()
+  // dfsDemo()
+    detectCycleUsingBFS()
+    //detectCycleDemoUsingDFS()
 }
 func solveSystemDesignDemo() {
   // staticAndDynamicPolymorphismDemo()
@@ -86,7 +88,7 @@ func solveSystemDesignDemo() {
   // abstractFactoryDemo()
 
   //   simpleSingletonDemo()
-  tomatoAppDemo()
+  // tomatoAppDemo()
   //  decoratorPatternDemo()
 
 }
