@@ -25,7 +25,7 @@ func solveAndPrintValues() {
   // print(singlyCircularLinkedListDemo())
   // print(doublyLinkedListDemo())
   // print(doublyCircularLinkedListDemo())
-  // circularLinkedListDemo()
+//   circularLinkedListDemo()
   // print(mergeLinkedLists())
   // detectLoopInLinkedList()
   // detectCycleLoopAndLength()

@@ -5,10 +5,7 @@
 @main
 struct dsa_in_swift {
   static func main() {
-    // solve()
-//    solveAndPrintValues()
-    // solveSystemDesignDemo()
-      DemoRunner.run(.systemDesign(.tomatoApp))
+      DemoRunner.run(.dsa(.singlyCircularLinkedList))
   }
 
 }

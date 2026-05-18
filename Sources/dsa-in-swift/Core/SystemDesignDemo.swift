@@ -6,20 +6,27 @@
 //
 enum SystemDesignDemo {
 
+    // MARK: OOPS
+    case staticAndDynamicPolymorphism
+    case staticPolymorphism
+
     // MARK: SOLID
-    case srp
-    case ocp
-    case lsp
-    case isp
-    case dip
+
+    case liskovSubstitution
+    case openClose
+    case singleResponsibility
+    case dependencyInversion
+    case interfaceSegregation
 
     // MARK: Design Patterns
+
     case strategyPattern
-    case decoratorPattern
     case abstractFactory
     case singleton
+    case decoratorPattern
 
     // MARK: Real Examples
-    case tomatoApp
+
     case documentEditor
+    case tomatoApp
 }

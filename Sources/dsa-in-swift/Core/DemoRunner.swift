@@ -31,63 +31,306 @@ private extension DemoRunner {
 
     static func runDSADemo(_ demo: DSADemo) {
 
-        switch demo {
+            switch demo {
 
-        // MARK: Arrays
+            // MARK: Basics
 
-        case .binarySearch:
-            print(binarySearch([1,2,3,4,5], 3))
+            case .patternPrinting:
 
-        case .majorityElement:
-            print(majorElement([3,2,3]))
+                patternPrintingDemo()
 
-        case .rotateArray:
-            rotateArrayDemo()
+            case .intersection:
 
-        // MARK: Strings
+                print(intersection([4, 9, 5], [9, 4, 9, 8, 4]))
 
-        case .palindrome:
-            print(isPalindromicString(str: "tenet"))
+            case .binarySearch:
 
-        case .anagram:
-            anagramDemo()
+                print(binarySearch([1, 2, 3, 4, 5], 3))
 
-        // MARK: Linked List
+            case .isSubsequence:
 
-        case .mergeLinkedList:
-            print(mergeLinkedLists())
+                print(isSubsequence("as", "basdcas"))
 
-        case .detectCycle:
-            detectCycleLoopAndLength()
+            case .majorityElement:
 
-        // MARK: Graphs
+                print(majorElement([3, 2, 3, 2, 3]))
 
-        case .dfs:
-            dfsDemo()
+            case .maxConsecutiveOnes:
 
-        case .bfs:
-            detectCycleUsingBFS()
+                print(findMaxConsecutiveOnes([1, 1, 1, 1, 0, 1, 1, 1]))
 
-        case .topologicalSortDFS:
-            topologicalSortDemoDFS()
+            case .majorityElementNBy3:
 
-        // MARK: Trees
+                print(majority([3, 2, 3, 4, 1, 2, 5, 3]))
 
-        case .avlTree:
-            avlTreeExample()
+            case .findPairs:
 
-        // MARK: Sorting
+                print(findPairs([1, 3, 1, 5, 4], 1))
 
-        case .heapSort:
-            heapSortDemo()
+            case .containsDuplicate:
 
-        case .quickSort:
-            quickSortDemo()
+                print(containsDuplicate([1, 2, 3, 4, 5]))
 
-        case .mergeSort:
-            mergeSortDemo()
+            case .containsNearbyDuplicate:
+
+                print(containsNearbyDuplicate([1, 0, 1, 1], 1))
+
+            case .removeDuplicates:
+
+                removeDuplicatesDemo()
+
+            case .fizzBuzz:
+
+                print(fizzBuzz(n: 15))
+
+            // MARK: Strings
+
+            case .palindrome:
+
+                print(isPalindromicString(str: "tenet"))
+
+            case .firstUniqueCharacter:
+
+                print(firstUniqueChar(in: "interaction"))
+
+            case .validPalindrome:
+
+                print(validPalindrome("abca"))
+
+            case .romanToInteger:
+
+                print(romanToInt("MCMXCIV"))
+
+            case .anagram:
+
+                anagramDemo()
+
+            case .longestPalindrome:
+
+                longestPalindromeDemo()
+
+            case .sortSentence:
+
+                sortSentenceDemo()
+
+            case .defangIPAddress:
+
+                defangIPaddrDemo()
+
+            case .isRotated:
+
+                isRotatedDemo()
+
+            case .pangram:
+
+                pangramDemo()
+
+            case .sortString:
+
+                sortStringDemo()
+
+            case .sortVowels:
+
+                sortVowelsDemo()
+
+            case .addStrings:
+
+                addStringsDemo()
+
+            case .longestSubstringWithoutRepeatingCharacters:
+
+                lengthOfLongestSubstringDemo()
+
+            case .countAndSay:
+
+                countAndSayDemo()
+
+            // MARK: Linked List
+
+            case .singlyLinkedList:
+
+                print(singlyLinkedListDemo())
+
+            case .singlyCircularLinkedList:
+
+                print(singlyCircularLinkedListDemo())
+
+            case .doublyLinkedList:
+
+                print(doublyLinkedListDemo())
+
+            case .doublyCircularLinkedList:
+
+                print(doublyCircularLinkedListDemo())
+
+
+            case .mergeLinkedLists:
+
+                print(mergeLinkedLists())
+
+            case .detectLoopInLinkedList:
+
+                detectLoopInLinkedList()
+
+            case .detectCycleLoopAndLength:
+
+                detectCycleLoopAndLength()
+
+            case .detectStartOfCycleLoop:
+
+                detectStartofCycleLoopAndLength()
+
+            // MARK: Stack
+
+            case .linkedListStack:
+
+                printLinkedListStack()
+
+            case .minStack:
+
+                minStackDemo()
+
+            case .validParenthesis:
+
+                validParanthesisDemo()
+
+            case .validLongParenthesis:
+
+                validLongParanthesisDemo()
+
+            // MARK: Arrays
+
+            case .finalPrices:
+
+                finalPricesDemo()
+
+            case .decodeXORArray:
+
+                decodeXORArrayDemo()
+
+            case .sumOfUnique:
+
+                sumOfUniqueDemo()
+
+            case .rotateArray:
+
+                rotateArrayDemo()
+
+            case .secondLargest:
+
+                secondLargestDemo()
+
+            // MARK: Sorting
+
+            case .bubbleSort:
+
+                bubbleSortExample()
+
+            case .insertionSort:
+
+                insertionSortExample()
+
+            case .bucketSort:
+
+                bucketSortDemo()
+
+            case .heapSort:
+
+                heapSortDemo()
+
+            case .quickSort:
+
+                quickSortDemo()
+
+            case .mergeSort:
+
+                mergeSortDemo()
+
+            // MARK: Dynamic Programming
+
+            case .possibleLootValue:
+
+                possibleLootValueDemo()
+
+            case .editDistance:
+
+                editDistanceDemo()
+
+            case .fibonacci:
+
+                fibbonacciDemo()
+
+            case .climbStairs:
+
+                climbStairsDemo()
+
+            // MARK: Math
+
+            case .decimalToBinary:
+
+                print(decimalToBinary(5))
+
+            case .factorial:
+
+                factorialDemo()
+
+            case .binaryGap:
+
+                binaryGapDemo()
+
+            // MARK: Trees
+
+            case .heap:
+
+                heapDemo()
+
+            case .avlTree:
+
+                avlTreeExample()
+
+            case .trie:
+
+                trieDemo()
+
+            // MARK: Graphs
+
+            case .adjacencyMatrix:
+
+                adjacencyMatrixDemo()
+
+            case .adjacencyList:
+
+                adjacencyListDemo()
+
+            case .dfs:
+
+                dfsDemo()
+
+            case .detectCycleUsingBFS:
+
+                detectCycleUsingBFS()
+
+            case .detectCycleUsingDFS:
+
+                detectCycleDemoUsingDFS()
+
+            case .topologicalSortDFS:
+
+                topologicalSortDemoDFS()
+
+            case .cycleDetectionExamples:
+
+                runCycleDetectionExamples()
+
+            // MARK: Misc
+
+            case .printGrid:
+
+                printGridDemo()
+
+            }
+
         }
-    }
 }
 
 // MARK: - System Design Runner
@@ -102,19 +345,19 @@ private extension DemoRunner {
 
         // MARK: SOLID
 
-        case .srp:
+        case .singleResponsibility:
             SRPDemo()
 
-        case .ocp:
+        case .openClose:
             openCloseDemo()
 
-        case .lsp:
+        case .liskovSubstitution:
             liskovSubstitutionDemo()
 
-        case .isp:
+        case .interfaceSegregation:
             interfaceSegregationDemo()
 
-        case .dip:
+        case .dependencyInversion:
             dependencyInversionDemo()
 
         // MARK: Design Patterns
@@ -138,6 +381,10 @@ private extension DemoRunner {
 
         case .documentEditor:
             documentEditorExample()
+        case .staticAndDynamicPolymorphism:
+                staticAndDynamicPolymorphismDemo()
+            case .staticPolymorphism:
+                staticPolymorphismDemo()
         }
     }
 }
