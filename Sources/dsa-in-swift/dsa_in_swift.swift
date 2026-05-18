@@ -5,7 +5,7 @@
 @main
 struct dsa_in_swift {
   static func main() {
-      DemoRunner.run(.dsa(.singlyCircularLinkedList))
+      DemoRunner.run(.dsa(.anagram))
   }
 
 }
