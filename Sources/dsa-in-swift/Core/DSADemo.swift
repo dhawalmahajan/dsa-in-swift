@@ -99,7 +99,7 @@ enum DSADemo {
        case detectCycleUsingDFS
        case topologicalSortDFS
        case cycleDetectionExamples
-
+        case cycleDetectionInDirectedGraph
        // MARK: Misc
 
        case printGrid
