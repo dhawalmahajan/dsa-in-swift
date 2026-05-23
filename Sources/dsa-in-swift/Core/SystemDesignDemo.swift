@@ -5,28 +5,65 @@
 //  Created by Dhawal Mahajan on 18/05/26.
 //
 enum SystemDesignDemo {
-
-    // MARK: OOPS
+    case oops(OOPS)
+    case solid(SolidPrinciples)
+    case pattern(DesignPatterns)
+    case realExample(AppsDemo)
+}
+enum OOPS {
     case staticAndDynamicPolymorphism
     case staticPolymorphism
-
-    // MARK: SOLID
-
+    case inheritance
+    case abstraction
+    case encapsulation
+}
+enum SolidPrinciples {
     case liskovSubstitution
     case openClose
     case singleResponsibility
     case dependencyInversion
     case interfaceSegregation
+}
 
-    // MARK: Design Patterns
-
+enum DesignPatterns {
     case strategyPattern
     case abstractFactory
     case singleton
     case decoratorPattern
-
-    // MARK: Real Examples
-
+}
+enum AppsDemo {
     case documentEditor
     case tomatoApp
 }
+//enum SystemDesignDemo {
+//
+//    // MARK: OOPS
+//    
+//    // MARK: SOLID
+//
+//    
+//
+//    // MARK: Design Patterns
+//
+//   
+//
+//    // MARK: Real Examples
+//
+//
+//
+//    // MARK: - Segregation by Type (no functions)
+//    
+//
+//    var category: Category {
+//        switch self {
+//        case .staticAndDynamicPolymorphism, .staticPolymorphism:
+//            return .oops
+//        case .liskovSubstitution, .openClose, .singleResponsibility, .dependencyInversion, .interfaceSegregation:
+//            return .solid
+//        case .strategyPattern, .abstractFactory, .singleton, .decoratorPattern:
+//            return .pattern
+//        case .documentEditor, .tomatoApp:
+//            return .realExample
+//        }
+//    }
+//}

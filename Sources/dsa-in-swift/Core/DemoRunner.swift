@@ -237,51 +237,55 @@ private extension DemoRunner {
     static func runSystemDesignDemo(
         _ demo: SystemDesignDemo
     ) {
-        
         switch demo {
-                
-                // MARK: SOLID
-                
-            case .singleResponsibility:
-                SRPDemo()
-                
-            case .openClose:
-                openCloseDemo()
-                
-            case .liskovSubstitution:
-                liskovSubstitutionDemo()
-                
-            case .interfaceSegregation:
-                interfaceSegregationDemo()
-                
-            case .dependencyInversion:
-                dependencyInversionDemo()
-                
-                // MARK: Design Patterns
-                
-            case .strategyPattern:
-                strategyDesignPatternDemo()
-                
-            case .decoratorPattern:
-                decoratorPatternDemo()
-                
-            case .abstractFactory:
-                abstractFactoryDemo()
-                
-            case .singleton:
-                simpleSingletonDemo()
-                
-                // MARK: Real Examples
-                
-            case .tomatoApp:
-                tomatoAppDemo()
-                
-            case .documentEditor:
-                documentEditorExample()
-            case .staticAndDynamicPolymorphism:
-                staticAndDynamicPolymorphismDemo()
-            case .staticPolymorphism:
-                staticPolymorphismDemo()
+        case .solid(let item):
+            switch item {
+                case .liskovSubstitution:
+                    liskovSubstitutionDemo()
+                case .openClose:
+                    openCloseDemo()
+                case .singleResponsibility:
+                    SRPDemo()
+                case .dependencyInversion:
+                    dependencyInversionDemo()
+                case .interfaceSegregation:
+                    interfaceSegregationDemo()
+            }
+        case .oops(let item):
+            switch item {
+                case .staticAndDynamicPolymorphism:
+                    staticAndDynamicPolymorphismDemo()
+                case .staticPolymorphism:
+                    staticPolymorphismDemo()
+                case .inheritance:
+                    inheritanceDemo()
+                case .abstraction:
+                    abstractionDemo()
+                case .encapsulation:
+                    encapsulationDemo()
+                @unknown default:
+                    print("Unhandled OOPS demo case: \(item)")
+            }
+            
+        case .pattern(let item):
+            switch item {
+                case .strategyPattern:
+                    strategyDesignPatternDemo()
+                case .abstractFactory:
+                    abstractFactoryDemo()
+                case .singleton:
+                    simpleSingletonDemo()
+                case .decoratorPattern:
+                    decoratorPatternDemo()
+            }
+        case .realExample(let item):
+            switch item {
+                case .documentEditor:
+                    documentEditorExample()
+                case .tomatoApp:
+                    tomatoAppDemo()
+            }
+            
         }
     }
 }
