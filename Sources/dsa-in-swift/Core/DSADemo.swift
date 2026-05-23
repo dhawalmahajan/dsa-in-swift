@@ -119,6 +119,7 @@ enum DSADemo {
         case topologicalSortDFS
         case cycleDetectionExamples
         case cycleDetectionInDirectedGraph
+        case cycleDetectionInUndirectedGraph
     }
 
     enum Misc {

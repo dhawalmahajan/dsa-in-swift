@@ -89,3 +89,7 @@ func detectCycleUsingBFS() {
     print("Cycle not detected")
   }
 }
+func detectCycleInUndirectedGraphDemo() {
+    detectCycleUsingBFS()
+    detectCycleDemoUsingDFS()
+}

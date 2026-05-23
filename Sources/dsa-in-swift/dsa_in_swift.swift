@@ -6,7 +6,7 @@
 struct dsa_in_swift {
   static func main() {
 //      DemoRunner.run(.systemDesign(.oops(.encapsulation)))
-      DemoRunner.run(.dsa(.graphs(.cycleDetectionInDirectedGraph)))
+      DemoRunner.run(.dsa(.graphs(.cycleDetectionInUndirectedGraph)))
   }
 
 }
