@@ -7,15 +7,27 @@
 
 private func isCyclicDirectedGraph(_ v: Int,edges: inout [[Int]]) -> Bool {
     var path = Array<Bool>(repeating: false, count: v)
-    return detectCycleUsingDFSInDirectedGraph(v, edges: &edges, path: &path)
+    var visited = Array<Bool>(repeating: false, count: v)
+    for i in 0..<v {
+        if !visited[i] && detectCycleUsingDFSInDirectedGraph(i, edges: &edges, path: &path, visited: &visited) {
+            return true
+        }
+    }
+    return false
 }
-private func detectCycleUsingDFSInDirectedGraph(_ node: Int, edges: inout [[Int]], path:inout [Bool]) -> Bool {
+private func detectCycleUsingDFSInDirectedGraph(_ node: Int, edges: inout [[Int]], path: inout [Bool], visited: inout [Bool]) -> Bool {
+    visited[node] = true
     path[node] = true
+    //Look at adjacent nodes.
     for neighbour in edges[node] {
         if path[neighbour] {
             return true
         }
-        if detectCycleUsingDFSInDirectedGraph(node, edges: &edges, path: &path) {
+        //If neighbour already visited then skip it
+        if visited[neighbour] == true {
+            continue
+        }
+        if detectCycleUsingDFSInDirectedGraph(neighbour, edges: &edges, path: &path, visited: &visited) {
             return true
         }
     }
@@ -24,14 +36,21 @@ private func detectCycleUsingDFSInDirectedGraph(_ node: Int, edges: inout [[Int]
 }
 func detectCycleInDirectedGraphDemo() {
      
-    let nodeCount = 5
+    let nodeCount = 6
     var adj = [
-        [1, 2], // 0 -> 1, 0 -> 2
-        [3],    // 1 -> 3
-        [3, 4], // 2 -> 3, 2 -> 4
-        [],     // 3
-        []      // 4
+        [5, 2], [5, 0], [4, 0], [4, 1], [2, 3], [3, 1]
+      
     ]
+    
     let result = isCyclicDirectedGraph(nodeCount, edges: &adj)
     print(result)
 }
+
+/*
+ [1, 2], // 0 -> 1, 0 -> 2
+ [3],    // 1 -> 3
+ [3, 4], // 2 -> 3, 2 -> 4
+ [],     // 3
+ []      // 4
+ 
+ */
