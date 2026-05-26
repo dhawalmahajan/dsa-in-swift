@@ -250,6 +250,11 @@ private extension DemoRunner {
                     case .printGrid:
                         printGridDemo()
                 }
+            case .searching(let item):
+                switch item {
+                    case .binary:
+                        binarySearchDemo()
+                }
         }
         
     }

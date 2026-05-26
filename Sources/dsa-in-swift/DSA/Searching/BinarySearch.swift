@@ -14,3 +14,6 @@ func binarySearch(_ nums: [Int], _ target: Int) -> Int {
   }
   return -1
 }
+func binarySearchDemo() {
+    print(binarySearch([1,2,5,3,2], 3))
+}

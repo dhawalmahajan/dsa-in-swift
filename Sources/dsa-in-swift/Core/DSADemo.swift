@@ -20,9 +20,12 @@ enum DSADemo {
     case trees(Trees)
     case graphs(Graphs)
     case misc(Misc)
+    case searching(Searching)
 
     // MARK: - Topic Enums
-
+    enum Searching {
+        case binary
+    }
     enum Basics {
         case patternPrinting
         case intersection
