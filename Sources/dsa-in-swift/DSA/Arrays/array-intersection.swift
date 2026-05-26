@@ -30,3 +30,6 @@ func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
   }
   return r
 }
+func interSectionDemo() {
+    print(intersection([1,2,3,4], [2,3,6,7]))
+}

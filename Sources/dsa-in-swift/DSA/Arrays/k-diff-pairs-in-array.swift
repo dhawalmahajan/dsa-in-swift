@@ -43,3 +43,6 @@ func findPairs(_ nums: [Int], _ k: Int) -> Int {
   }
   return count
 }
+func findPairsDemo() {
+    print(findPairs([1, 2, 3, 4, 5], 1))
+}

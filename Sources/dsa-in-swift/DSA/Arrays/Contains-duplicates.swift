@@ -46,3 +46,6 @@ func containsDuplicate(_ nums: [Int]) -> Bool {
   }
   return false
 }
+func containDuplicateDemo() {
+    print(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))
+}

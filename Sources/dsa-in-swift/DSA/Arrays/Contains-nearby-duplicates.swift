@@ -38,3 +38,6 @@ func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
   }
   return minimum <= k
 }
+func containNearbyDuplicateDemo() {
+    print(containsNearbyDuplicate( [1,2,3,1,2,3], 2))
+}

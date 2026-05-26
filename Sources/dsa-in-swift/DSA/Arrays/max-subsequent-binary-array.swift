@@ -12,3 +12,8 @@ func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
   }
   return globalCount
 }
+func maxConsecutiveOnesDemo() {
+    let input = [1, 1, 0, 1, 1, 1]
+    let result = findMaxConsecutiveOnes(input)
+    print("Maximum consecutive ones: \(result)")    
+}

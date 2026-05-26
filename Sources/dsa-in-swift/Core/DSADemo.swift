@@ -80,6 +80,17 @@ enum DSADemo {
         case sumOfUnique
         case rotateArray
         case secondLargest
+        case arrayIntersection
+        case containsDuplicates
+        case containsNearbyDuplicates
+        case kDiffPairs
+        case majority
+        case maxSubsequentBinaryArray
+        case removeDuplicateSortedArray
+        case smallestDistinctWindow
+        case specialDiscount
+        case threeSum
+        case uniqueElementSum
     }
 
     enum Sorting {

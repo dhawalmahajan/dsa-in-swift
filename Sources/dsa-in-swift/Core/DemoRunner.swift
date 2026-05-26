@@ -144,6 +144,29 @@ private extension DemoRunner {
                         rotateArrayDemo()
                     case .secondLargest:
                         secondLargestDemo()
+                    case .arrayIntersection:
+                        interSectionDemo()
+                    case .containsDuplicates:
+                        containDuplicateDemo()
+                    
+                    case .containsNearbyDuplicates:
+                        containNearbyDuplicateDemo()
+                    case .kDiffPairs:
+                        findPairsDemo()
+                    case .majority:
+                        majorityDemo()
+                    case .maxSubsequentBinaryArray:
+                        maxConsecutiveOnesDemo()
+                    case .removeDuplicateSortedArray:
+                        removeDuplicatesDemo()
+                    case .smallestDistinctWindow:
+                        smallestWindowLengthDemo()
+                    case .specialDiscount:
+                        finalPricesDemo()
+                    case .threeSum:
+                        solveThreeSum()
+                    case .uniqueElementSum:
+                        sumOfUniqueDemo()
                 }
                 
                 // MARK: Sorting

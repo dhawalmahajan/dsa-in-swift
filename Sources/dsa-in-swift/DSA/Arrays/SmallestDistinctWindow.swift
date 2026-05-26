@@ -56,3 +56,6 @@ private func findSmallestWindowLength(_ str: String) -> Int {
   }
   return length
 }
+func smallestWindowLengthDemo() {
+    print(findSmallestWindowLength("aabcbcdbca"))
+}
