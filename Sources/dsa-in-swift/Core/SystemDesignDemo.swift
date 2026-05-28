@@ -30,40 +30,9 @@ enum DesignPatterns {
     case abstractFactory
     case singleton
     case decoratorPattern
+    case notificationService
 }
 enum AppsDemo {
     case documentEditor
     case tomatoApp
 }
-//enum SystemDesignDemo {
-//
-//    // MARK: OOPS
-//    
-//    // MARK: SOLID
-//
-//    
-//
-//    // MARK: Design Patterns
-//
-//   
-//
-//    // MARK: Real Examples
-//
-//
-//
-//    // MARK: - Segregation by Type (no functions)
-//    
-//
-//    var category: Category {
-//        switch self {
-//        case .staticAndDynamicPolymorphism, .staticPolymorphism:
-//            return .oops
-//        case .liskovSubstitution, .openClose, .singleResponsibility, .dependencyInversion, .interfaceSegregation:
-//            return .solid
-//        case .strategyPattern, .abstractFactory, .singleton, .decoratorPattern:
-//            return .pattern
-//        case .documentEditor, .tomatoApp:
-//            return .realExample
-//        }
-//    }
-//}

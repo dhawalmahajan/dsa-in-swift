@@ -8,7 +8,7 @@
 import Foundation
 struct DemoRunner {
     
-    static func run(_ demo: DemoType) {
+    @MainActor static func run(_ demo: DemoType) {
         
         switch demo {
                 
@@ -264,7 +264,7 @@ private extension DemoRunner {
 
 private extension DemoRunner {
     
-    static func runSystemDesignDemo(
+    @MainActor static func runSystemDesignDemo(
         _ demo: SystemDesignDemo
     ) {
         switch demo {
@@ -307,6 +307,9 @@ private extension DemoRunner {
                     simpleSingletonDemo()
                 case .decoratorPattern:
                     decoratorPatternDemo()
+                case .notificationService:
+                    notificationServiceDemo()
+                
             }
         case .realExample(let item):
             switch item {

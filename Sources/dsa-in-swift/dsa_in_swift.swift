@@ -5,8 +5,8 @@
 @main
 struct dsa_in_swift {
   static func main() {
-//      DemoRunner.run(.systemDesign(.oops(.encapsulation)))
-      DemoRunner.run(.dsa(.graphs(.cycleDetectionInDirectedGraph)))
+      DemoRunner.run(.systemDesign(.pattern(.notificationService)))
+//      DemoRunner.run(.dsa(.arrays(.arrayIntersection)))
   }
 
 }
