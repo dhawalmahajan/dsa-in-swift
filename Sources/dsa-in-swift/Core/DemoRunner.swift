@@ -242,6 +242,8 @@ private extension DemoRunner {
                         detectCycleInDirectedGraphDemo()
                     case .cycleDetectionInUndirectedGraph:
                         detectCycleInUndirectedGraphDemo()
+                    case .bipartiteGraph:
+                        bipartiteGraphDemo()
                 }
                 
                 // MARK: Misc
