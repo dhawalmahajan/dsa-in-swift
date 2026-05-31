@@ -6,7 +6,7 @@
 struct dsa_in_swift {
   static func main() {
 //      DemoRunner.run(.systemDesign(.pattern(.notificationService)))
-      DemoRunner.run(.dsa(.graphs(.bipartiteGraph)))
+      DemoRunner.run(.dsa(.graphs(.covidSpread)))
   }
 
 }
