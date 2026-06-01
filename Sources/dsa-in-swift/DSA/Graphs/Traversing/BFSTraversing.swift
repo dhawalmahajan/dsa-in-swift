@@ -12,8 +12,8 @@ Visit 1 (next neighbor of 0) → Output: 0, 2, 3, 1
 Visit 4 (neighbor of 2) → Final Output: 0, 2, 3, 1, 4
  
 Constraints:
-1 ≤ V = adj.size() ≤ 104
-0 ≤ adj[i][j] ≤ 104
+1 ≤ V = adj.size() ≤ 10^4
+0 ≤ adj[i][j] ≤ 10^4
  */
 private func bfs(_ v: Int,_ adj: [[Int]]) -> [Int]{
     var q:[Int] = []
