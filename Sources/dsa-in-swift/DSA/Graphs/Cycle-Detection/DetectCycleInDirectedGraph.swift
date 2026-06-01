@@ -4,7 +4,26 @@
 //
 //  Created by Dhawal Mahajan on 14/05/26.
 //
+/*
+ *Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check whether it contains any cycle or not.
+The graph is represented as a 2D vector edges[][], where each entry edges[i] = [u, v] denotes an edge from vertex u to v.
 
+Input: V = 4, edges[][] = [[0, 1], [1, 2], [2, 0], [2, 3]]
+
+Output: true
+Explanation: The diagram clearly shows a cycle 0 → 1 → 2 → 0
+
+Input: V = 4, edges[][] = [[0, 1], [0, 2], [1, 2], [2, 3]]
+Output: false
+Explanation: no cycle in the graph
+
+Constraints:
+1 ≤ V ≤ 10^5
+0 ≤ E ≤ 10^5
+0 ≤ edges[i][0], edges[i][1] < V
+ *
+ *
+ * */
 //MARK: DFS
 private func isCyclicDirectedGraphUsingDFS(_ v: Int,edges: inout [[Int]]) -> Bool {
     var path = Array<Bool>(repeating: false, count: v)

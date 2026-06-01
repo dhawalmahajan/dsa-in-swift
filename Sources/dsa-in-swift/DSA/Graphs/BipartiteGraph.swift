@@ -5,10 +5,26 @@
 //  Created by Dhawal Mahajan on 30/05/26.
 //
 /*
- *Given a connected undirected graph containing V vertices represented by a 2-d adjacency list adj[][], where each adj[i] represents the list of vertices connected to vertex i. Perform a Depth First Search (DFS) traversal starting from vertex 0, visiting vertices from left to right as per the given adjacency list, and return a list containing the DFS traversal of the graph.
+ * Given a Graph with V vertices (Numbered from 0 to V-1) and E edges. Check whether the graph is bipartite or not.
 
-Note: Do traverse in the same order as they are in the given adjacency list.
- *Input: adj[][] = [[2, 3, 1], [0], [0, 4], [0], [2]]
+A bipartite graph can be colored with two colors such that no two adjacent vertices share the same color. This means we can divide the graph’s vertices into two distinct sets where:
+
+All edges connect vertices from one set to vertices in the other set.
+No edges exist between vertices within the same set.
+
+Input: V = 3, edges[][] = [[0, 1], [1,2]]
+Output: true
+Explanation: The given graph can be colored in two colors so, it is a bipartite graph.
+
+Input: V = 4, edges[][] = [[0, 3], [1, 2], [3, 2], [0, 2]]
+Output: false 
+Explanation: The given graph cannot be colored in two colors such that color of adjacent vertices differs. 
+Constraints:
+1 ≤ V ≤ 2 * 10^5
+1 ≤ edges.size() ≤ 10^5
+1 ≤ edges[i][j] ≤ 10^5
+ *
+ *
  * */
 //MARK: BFS
 
