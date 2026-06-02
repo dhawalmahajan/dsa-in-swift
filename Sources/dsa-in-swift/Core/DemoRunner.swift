@@ -246,6 +246,8 @@ private extension DemoRunner {
                         bipartiteGraphDemo()
                     case .covidSpread:
                         covidSpreadDemo()
+                        case .numberOfIslands:
+numberOfIslandDemo()
                 }
                 
                 // MARK: Misc

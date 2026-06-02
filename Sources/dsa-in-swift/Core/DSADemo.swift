@@ -136,6 +136,7 @@ enum DSADemo {
         case cycleDetectionInUndirectedGraph
         case bipartiteGraph
         case covidSpread
+        case numberOfIslands
     }
 
     enum Misc {
