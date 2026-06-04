@@ -31,6 +31,8 @@ enum DesignPatterns {
     case singleton
     case decoratorPattern
     case notificationService
+    case commandPattern
+    case adapterPattern
 }
 enum AppsDemo {
     case documentEditor

@@ -316,6 +316,11 @@ private extension DemoRunner {
                 case .notificationService:
                     notificationServiceDemo()
                 
+                case .commandPattern:
+                    commandPatternDemo()
+                case .adapterPattern:
+                    adapterPatternDemo()
+                    
             }
         case .realExample(let item):
             switch item {

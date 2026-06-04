@@ -5,8 +5,8 @@
 @main
 struct dsa_in_swift {
   static func main() {
-//      DemoRunner.run(.systemDesign(.pattern(.notificationService)))
-      DemoRunner.run(.dsa(.graphs(.covidSpread)))
+      DemoRunner.run(.systemDesign(.pattern(.adapterPattern)))
+//      DemoRunner.run(.dsa(.graphs(.numberOfIslands)))
   }
 
 }
