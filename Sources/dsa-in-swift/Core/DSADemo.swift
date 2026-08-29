@@ -110,6 +110,7 @@ enum DSADemo {
         case editDistance
         case fibonacci
         case climbStairs
+        case coinChange
     }
 
     enum Math {

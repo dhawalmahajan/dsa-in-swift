@@ -197,6 +197,8 @@ private extension DemoRunner {
                         fibbonacciDemo()
                     case .climbStairs:
                         climbStairsDemo()
+                    case .coinChange:
+                        coinChangeDemo()
                 }
                 
                 // MARK: Math
