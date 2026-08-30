@@ -9,16 +9,11 @@ import Foundation
 struct DemoRunner {
     
     @MainActor static func run(_ demo: DemoType) {
-        
         switch demo {
-                
                 // MARK: DSA
-                
             case .dsa(let dsaDemo):
                 runDSADemo(dsaDemo)
-                
                 // MARK: System Design
-                
             case .systemDesign(let systemDemo):
                 runSystemDesignDemo(systemDemo)
         }
@@ -28,11 +23,8 @@ struct DemoRunner {
 // MARK: - DSA Runner
 
 private extension DemoRunner {
-    
     static func runDSADemo(_ demo: DSADemo) {
-        
         switch demo {
-                
                 // MARK: Basics
             case .basics(let item):
                 switch item {
@@ -148,7 +140,7 @@ private extension DemoRunner {
                         interSectionDemo()
                     case .containsDuplicates:
                         containDuplicateDemo()
-                    
+                        
                     case .containsNearbyDuplicates:
                         containNearbyDuplicateDemo()
                     case .kDiffPairs:
@@ -208,8 +200,6 @@ private extension DemoRunner {
                         print(decimalToBinary(5))
                     case .factorial:
                         factorialDemo()
-                    case .binaryGap:
-                        binaryGapDemo()
                 }
                 
                 // MARK: Trees
@@ -248,8 +238,8 @@ private extension DemoRunner {
                         bipartiteGraphDemo()
                     case .covidSpread:
                         covidSpreadDemo()
-                        case .numberOfIslands:
-numberOfIslandDemo()
+                    case .numberOfIslands:
+                        numberOfIslandDemo()
                 }
                 
                 // MARK: Misc
@@ -258,10 +248,25 @@ numberOfIslandDemo()
                     case .printGrid:
                         printGridDemo()
                 }
+                
+                // MARK: Searching
             case .searching(let item):
                 switch item {
                     case .binary:
                         binarySearchDemo()
+                }
+                
+                // MARK: BitSet
+            case .bitSet(let item):
+                switch item {
+                    case .simpleBitSet:
+                        simpleBitsetDemo()
+                    case .binaryGap:
+                        binaryGapDemo()
+                    case .bitSetDemo:
+                        bitSetDemo()
+                    case .advanceBitSetDemo:
+                        advancedBitsetDemo()
                 }
         }
         
@@ -271,67 +276,66 @@ numberOfIslandDemo()
 // MARK: - System Design Runner
 
 private extension DemoRunner {
-    
     @MainActor static func runSystemDesignDemo(
         _ demo: SystemDesignDemo
     ) {
         switch demo {
-        case .solid(let item):
-            switch item {
-                case .liskovSubstitution:
-                    liskovSubstitutionDemo()
-                case .openClose:
-                    openCloseDemo()
-                case .singleResponsibility:
-                    SRPDemo()
-                case .dependencyInversion:
-                    dependencyInversionDemo()
-                case .interfaceSegregation:
-                    interfaceSegregationDemo()
-            }
-        case .oops(let item):
-            switch item {
-                case .staticAndDynamicPolymorphism:
-                    staticAndDynamicPolymorphismDemo()
-                case .staticPolymorphism:
-                    staticPolymorphismDemo()
-                case .inheritance:
-                    inheritanceDemo()
-                case .abstraction:
-                    abstractionDemo()
-                case .encapsulation:
-                    encapsulationDemo()
-                @unknown default:
-                    print("Unhandled OOPS demo case: \(item)")
-            }
-            
-        case .pattern(let item):
-            switch item {
-                case .strategyPattern:
-                    strategyDesignPatternDemo()
-                case .abstractFactory:
-                    abstractFactoryDemo()
-                case .singleton:
-                    simpleSingletonDemo()
-                case .decoratorPattern:
-                    decoratorPatternDemo()
-                case .notificationService:
-                    notificationServiceDemo()
+            case .solid(let item):
+                switch item {
+                    case .liskovSubstitution:
+                        liskovSubstitutionDemo()
+                    case .openClose:
+                        openCloseDemo()
+                    case .singleResponsibility:
+                        SRPDemo()
+                    case .dependencyInversion:
+                        dependencyInversionDemo()
+                    case .interfaceSegregation:
+                        interfaceSegregationDemo()
+                }
+            case .oops(let item):
+                switch item {
+                    case .staticAndDynamicPolymorphism:
+                        staticAndDynamicPolymorphismDemo()
+                    case .staticPolymorphism:
+                        staticPolymorphismDemo()
+                    case .inheritance:
+                        inheritanceDemo()
+                    case .abstraction:
+                        abstractionDemo()
+                    case .encapsulation:
+                        encapsulationDemo()
+                    @unknown default:
+                        print("Unhandled OOPS demo case: \(item)")
+                }
                 
-                case .commandPattern:
-                    commandPatternDemo()
-                case .adapterPattern:
-                    adapterPatternDemo()
-                    
-            }
-        case .realExample(let item):
-            switch item {
-                case .documentEditor:
-                    documentEditorExample()
-                case .tomatoApp:
-                    tomatoAppDemo()
-            }
-            
+            case .pattern(let item):
+                switch item {
+                    case .strategyPattern:
+                        strategyDesignPatternDemo()
+                    case .abstractFactory:
+                        abstractFactoryDemo()
+                    case .singleton:
+                        simpleSingletonDemo()
+                    case .decoratorPattern:
+                        decoratorPatternDemo()
+                    case .notificationService:
+                        notificationServiceDemo()
+                        
+                    case .commandPattern:
+                        commandPatternDemo()
+                    case .adapterPattern:
+                        adapterPatternDemo()
+                        
+                }
+            case .realExample(let item):
+                switch item {
+                    case .documentEditor:
+                        documentEditorExample()
+                    case .tomatoApp:
+                        tomatoAppDemo()
+                }
+                
         }
     }
 }

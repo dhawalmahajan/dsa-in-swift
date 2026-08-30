@@ -10,6 +10,7 @@ import Foundation
 enum DSADemo {
     // Top-level topics with associated nested enums for strong typing
     case basics(Basics)
+    case bitSet(BitSet)
     case strings(Strings)
     case linkedList(LinkedList)
     case stack(Stack)
@@ -25,6 +26,12 @@ enum DSADemo {
     // MARK: - Topic Enums
     enum Searching {
         case binary
+    }
+    enum BitSet {
+        case simpleBitSet
+        case binaryGap
+        case bitSetDemo
+        case advanceBitSetDemo
     }
     enum Basics {
         case patternPrinting
@@ -116,7 +123,6 @@ enum DSADemo {
     enum Math {
         case decimalToBinary
         case factorial
-        case binaryGap
     }
 
     enum Trees {
