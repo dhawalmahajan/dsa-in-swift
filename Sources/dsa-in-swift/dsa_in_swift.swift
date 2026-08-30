@@ -6,8 +6,7 @@
 struct dsa_in_swift {
   static func main() {
 //      DemoRunner.run(.systemDesign(.pattern(.adapterPattern)))
-//      DemoRunner.run(.dsa(.graphs(.numberOfIslands)))
-      DemoRunner.run(.dsa(.dynamicProgramming(.coinChange)))
+      DemoRunner.run(.dsa(.graphs(.shortestPathUndirectedGraph)))
   }
 
 }

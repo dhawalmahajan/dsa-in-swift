@@ -147,5 +147,6 @@ enum DSADemo {
         case bipartiteGraph
         case covidSpread
         case numberOfIslands
+        case shortestPathUndirectedGraph
     }
 }

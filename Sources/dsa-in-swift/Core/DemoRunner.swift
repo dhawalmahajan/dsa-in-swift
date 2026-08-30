@@ -243,6 +243,8 @@ private extension DemoRunner {
                         covidSpreadDemo()
                     case .numberOfIslands:
                         numberOfIslandDemo()
+                    case .shortestPathUndirectedGraph:
+                        shortestPathUndirectedGraphDemo()
                 }
                 
                 // MARK: Searching
