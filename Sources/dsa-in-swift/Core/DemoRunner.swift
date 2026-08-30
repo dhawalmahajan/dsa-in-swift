@@ -28,12 +28,8 @@ private extension DemoRunner {
                 // MARK: Basics
             case .basics(let item):
                 switch item {
-                    case .patternPrinting:
-                        patternPrintingDemo()
                     case .intersection:
                         print(intersection([4, 9, 5], [9, 4, 9, 8, 4]))
-                    case .binarySearch:
-                        print(binarySearch([1, 2, 3, 4, 5], 3))
                     case .isSubsequence:
                         print(isSubsequence("as", "basdcas"))
                     case .majorityElement:
@@ -52,6 +48,13 @@ private extension DemoRunner {
                         removeDuplicatesDemo()
                     case .fizzBuzz:
                         print(fizzBuzz(n: 15))
+                }
+            case .patternPrinting(let item):
+                switch item {
+                    case .patternPrinting:
+                        patternPrintingDemo()
+                    case .printGrid:
+                        printGridDemo()
                 }
                 
                 // MARK: Strings
@@ -240,13 +243,6 @@ private extension DemoRunner {
                         covidSpreadDemo()
                     case .numberOfIslands:
                         numberOfIslandDemo()
-                }
-                
-                // MARK: Misc
-            case .misc(let item):
-                switch item {
-                    case .printGrid:
-                        printGridDemo()
                 }
                 
                 // MARK: Searching

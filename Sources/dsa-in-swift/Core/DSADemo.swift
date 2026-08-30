@@ -10,6 +10,7 @@ import Foundation
 enum DSADemo {
     // Top-level topics with associated nested enums for strong typing
     case basics(Basics)
+    case patternPrinting(PatternPrinting)
     case bitSet(BitSet)
     case strings(Strings)
     case linkedList(LinkedList)
@@ -20,12 +21,16 @@ enum DSADemo {
     case math(Math)
     case trees(Trees)
     case graphs(Graphs)
-    case misc(Misc)
     case searching(Searching)
 
     // MARK: - Topic Enums
     enum Searching {
         case binary
+    }
+    
+    enum PatternPrinting {
+        case patternPrinting
+        case printGrid
     }
     enum BitSet {
         case simpleBitSet
@@ -34,9 +39,7 @@ enum DSADemo {
         case advanceBitSetDemo
     }
     enum Basics {
-        case patternPrinting
         case intersection
-        case binarySearch
         case isSubsequence
         case majorityElement
         case maxConsecutiveOnes
@@ -144,9 +147,5 @@ enum DSADemo {
         case bipartiteGraph
         case covidSpread
         case numberOfIslands
-    }
-
-    enum Misc {
-        case printGrid
     }
 }
